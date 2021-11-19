@@ -34,7 +34,7 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "src/app/hur-theme.scss"
+                            "src/app/hur-theme.css"
                         ],
                         "scripts": []
                     },
@@ -99,7 +99,7 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "src/app/hur-theme.scss"
+                            "src/app/hur-theme.css"
                         ],
                         "scripts": []
                     }
