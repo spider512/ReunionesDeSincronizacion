@@ -1,14 +1,17 @@
-<header>
+<app-pantalla-que-voy-hacer-hoy></app-pantalla-que-voy-hacer-hoy>
+<!-- <header>
     <app-header></app-header>
-</header>
+</header> -->
 <!-- <div id="main">
     <article>Article</article>
     <nav>Nav</nav>
     <aside>Aside</aside>
 </div> -->
 
-<app-login *ngIf="!auth.isLogged()"></app-login>
-<router-outlet *ngIf="auth.isLogged()"></router-outlet>
-<footer>
+<!-- <app-login *ngIf="!auth.isLogged()"></app-login> -->
+<router-outlet *ngIf="auth.isLogged()">
+
+</router-outlet>
+<!-- <footer>
     <app-footer></app-footer>
-</footer>
+</footer> -->
