@@ -9,6 +9,6 @@
 
 <app-login *ngIf="!auth.isLogged()"></app-login>
 <router-outlet *ngIf="auth.isLogged()"></router-outlet>
-<footer>
+<footer class="footer">
     <app-footer></app-footer>
 </footer>

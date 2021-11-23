@@ -13,6 +13,18 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ayer() {
+    this.router.navigate([`/ayer`]);
+  }
+
+  hoy() {
+    this.router.navigate([`/hoy`]);
+  }
+
+  dificultades() {
+    this.router.navigate([`/dificultades`]);
+  }
+
   reunionDiaria() {
     this.router.navigate([`/reunion-diaria`]);
   }
