@@ -12,13 +12,32 @@
 .municipio {
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
-
     margin-left: 8%;
 }
 
+
+.contenedor {
+    display: inline-flex;
+}
+
 .dropdown {
-    margin-right: 5%;
     border: none;
+    display: flex;
+}
+
+.avatar {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background: #ECE4E4;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navBar p {
+    font-size: 30px;
 }
 
 #dropdownMenuButton1 {
@@ -27,6 +46,12 @@
     border: none;
 }
 
-#dropdown-menu:active {
-    border: none;
+@media only screen and (max-width: 588px) {
+    .navBar p {
+        font-size: 20px;
+    }
+
+    .navBar .dropdown {
+        font-size: 11px;
+    }
 }
