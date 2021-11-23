@@ -1,1 +1,53 @@
-<p>pantalla-que-hice-ayer works!</p>
+<!-- <div class="padre">
+    <div class="side1">
+        side
+    </div>
+
+    <div class="centro">
+        <h1 class="titulo">Bienvenido al proyecto Reuniones de Sincronización</h1>
+    </div>
+
+    <div class="side2">
+        side
+    </div>
+</div> -->
+
+<mat-grid-list cols="10" rowHeight="100vh" class="main">
+    <mat-grid-tile colspan="1" rowspan="1" class="tileCustom"></mat-grid-tile>
+
+    <mat-grid-tile colspan="8" rowspan="1">
+
+        <div class="tileMain">
+            <h1>Bienvenido al proyecto Reuniones de Sincronización</h1>
+
+            <mat-card class="cardMain">
+                <mat-card-content>
+                    <h2>¿Qué hice ayer?</h2>
+
+                    <form action="" (ngSubmit)="agregar()">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Ingrese tarea</mat-label>
+                            <input matInput type="text" name="tarea" [(ngModel)]="nuevo.nombre">
+                        </mat-form-field>
+
+                        <button mat-flat-button color="primary" style="margin-left: 40px;">Agregar tarea</button>
+                    </form>
+
+                    <mat-selection-list #selecTareas>
+                        <mat-list-option *ngFor="let tarea of tareas">
+                            {{tarea.nombre}}
+                        </mat-list-option>
+                    </mat-selection-list>
+
+                    <p style="margin-top: 20px;">
+                        Tareas seleccionadas: {{selecTareas.selectedOptions.selected.length}}
+                    </p>
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan=" 1" rowspan="1" class="tileCustom"></mat-grid-tile>
+</mat-grid-list>
