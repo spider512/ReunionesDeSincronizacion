@@ -3,25 +3,25 @@ import { AuthService } from '../auth.service';
 import {MatInputModule} from '@angular/material/input';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+	selector: 'app-login',
+	templateUrl: './login.component.html',
+	styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public username?: string;
+	public username?: string;
 
-  public password?: string;
+	public password?: string;
 
-  constructor(public auth: AuthService) { }
+	constructor(public auth: AuthService) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  public login() {
-    if (this.username && this.password) {
-      this.auth.login(this.username, this.password);
-      console.log(this.auth.loginInfo);
-    }
-  }
+	public login() {
+		if (this.username && this.password) {
+			this.auth.login(this.username, this.password);
+			console.log(this.auth.loginInfo);
+		}
+	}
 
 }

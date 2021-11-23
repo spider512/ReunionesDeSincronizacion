@@ -1,14 +1,26 @@
-<header>
+<!-- <header>
     <app-header></app-header>
 </header>
-<!-- <div id="main">
+<div id="main">
     <article>Article</article>
     <nav>Nav</nav>
     <aside>Aside</aside>
-</div> -->
+</div>
 
 <app-login *ngIf="!auth.isLogged()"></app-login>
 <router-outlet *ngIf="auth.isLogged()"></router-outlet>
 <footer class="footer">
+    <app-footer></app-footer>
+</footer> -->
+
+<header>
+    <app-header></app-header>
+</header>
+
+<main>
+    <app-pantalla-que-hice-ayer></app-pantalla-que-hice-ayer>
+</main>
+
+<footer>
     <app-footer></app-footer>
 </footer>
