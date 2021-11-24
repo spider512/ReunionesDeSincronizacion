@@ -1,3 +1,52 @@
 <app-navbar-usuario></app-navbar-usuario>
+<br>
+<h4 style="margin-left: 5%;">Bienvenido al proyecto Reuniones de sincronización</h4>
+<hr>
 
-<p>pantalla-que-voy-hacer-hoy works!</p>
+<div class="contenedor">
+    <div class="formTareas">
+        <div style="display: flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h6>¿Que voy hacer hoy?</h6>
+            </div>
+            <div>
+                <app-pop-up-cargar-tarea></app-pop-up-cargar-tarea>
+                <!-- <button (click)="abrirPopUp()" type="button" class="btn btn-outline-secondary">Cargar tarea</button> -->
+            </div>
+        </div>
+        <hr>
+        <div class="input-group">
+            <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+                #txtBuscar>
+                <option selected>
+                    ingrese la tarea...</option>
+                <option *ngFor="let opcion of opciones">
+                    {{opcion}}
+                </option>
+            </select>
+            <button class="btn btn-outline-secondary" type="button" (click)="agregarTarea()">Agregar tarea</button>
+            
+
+        </div>
+
+
+
+        <div class="elementosAgregados ">
+            <div>
+                <mat-selection-list *ngFor="let opcion of tareaAgregada">
+                    <div class="elementosTareasAgregadas">
+                        <div>
+                            <li>
+                                {{opcion}}
+                            </li>
+                        </div>
+                        <div>
+                            <button (click)="quitar(opcion)" type="button" class="btn btn-danger">Quitar</button>
+                        </div>
+                    </div>
+                </mat-selection-list>
+            </div>
+        </div>
+
+    </div>
+</div>

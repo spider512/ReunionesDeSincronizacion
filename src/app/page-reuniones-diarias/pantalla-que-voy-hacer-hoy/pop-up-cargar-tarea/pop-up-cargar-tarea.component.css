@@ -1,0 +1,9 @@
+.modal-header h5 {
+    text-align: center;
+    width: 100%;
+}
+
+.modal-footer
+{
+    justify-content: center;
+}

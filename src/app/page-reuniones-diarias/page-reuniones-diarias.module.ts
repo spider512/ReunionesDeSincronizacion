@@ -5,6 +5,8 @@ import { PantallaQueVoyHacerHoyComponent } from './pantalla-que-voy-hacer-hoy/pa
 import { PantallaQueHiceAyerComponent } from './pantalla-que-hice-ayer/pantalla-que-hice-ayer.component';
 import { PantallaDificultadesQuePreveoComponent } from './pantalla-dificultades-que-preveo/pantalla-dificultades-que-preveo.component';
 import { SharedModule } from '../shared/shared.module';
+import {MatListModule} from '@angular/material/list';
+import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component'; 
 
 
 
@@ -13,10 +15,12 @@ import { SharedModule } from '../shared/shared.module';
     PantallaPrincipalComponent,
     PantallaQueVoyHacerHoyComponent,
     PantallaQueHiceAyerComponent,
-    PantallaDificultadesQuePreveoComponent
+    PantallaDificultadesQuePreveoComponent,
+    PopUpCargarTareaComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent],
   imports: [
+    MatListModule,
     SharedModule,
     CommonModule
   ]
