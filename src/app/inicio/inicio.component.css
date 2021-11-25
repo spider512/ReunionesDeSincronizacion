@@ -1,35 +1,48 @@
-.cuadrado {
-  position: fixed;
-  width: 85%;
-  left: auto;
-  right: auto;
-  top: 233px;
-  bottom: 159px;
-  margin: 64px;
-  text-align: center;
+.contenedorCuadrado {
+  display: flex;
+  justify-content: center;
+}
 
+.cuadrado {
+  height: auto;
+  width: 85%;
+  text-align: center;
   background: rgba(196, 196, 196, 0.25);
   border: 1px solid #3FA948;
   box-sizing: border-box;
-  border-radius: 30px;}
-
-
-.contenedorBotones {
+  border-radius: 30px;
   display: flex;
-  justify-content: space-between;
-  margin: 20px;
+  justify-content: space-evenly;
+  align-items: center;
 
 }
-.posicionBotones {
-  padding: 40px;  
+
+
+@media only screen and (max-width: 900px) {
+  .cuadrado {
+    display: block;
+  }
+
+  .posicionBotones {
+    padding: 30px;
+  }
 }
+
+
+.posicionBotones {
+  padding: 30px;
+}
+
+
+
+
 
 .tituloInicio {
-    font-family: Roboto;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 42px;
-    letter-spacing: 0em;
-    text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
 }
