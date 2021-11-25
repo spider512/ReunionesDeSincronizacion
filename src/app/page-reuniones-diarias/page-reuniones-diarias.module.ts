@@ -35,7 +35,8 @@ import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-ag
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    SharedModule
   ],
   providers: [
     PageReunionesService,
