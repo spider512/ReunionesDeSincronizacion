@@ -35,7 +35,7 @@
                         "styles": [
                             "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
                             "src/styles.css",
-                            "src/app/hur-theme.scss"
+                            "src/app/hur-theme.css"
                         ],
                         "scripts": []
                     },
@@ -101,7 +101,7 @@
                         "styles": [
                             "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
                             "src/styles.css",
-                            "src/app/hur-theme.scss"
+                            "src/app/hur-theme.css"
                         ],
                         "scripts": []
                     }

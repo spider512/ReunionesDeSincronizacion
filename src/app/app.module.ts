@@ -8,9 +8,16 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+
 import { InicioComponent } from './inicio/inicio.component';
+
 import { ReunionDiariaComponent } from './reunion-diaria/reunion-diaria.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
+
+
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
 
 
@@ -21,7 +28,7 @@ import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reunio
     FooterComponent,
     LoginComponent,
     InicioComponent,
-    ReunionDiariaComponent
+    ReunionDiariaComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -31,9 +38,13 @@ import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reunio
     MatInputModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    PageReunionesDiariasModule
+    PageReunionesDiariasModule,
+    NoopAnimationsModule,
+    PageReunionesDiariasModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

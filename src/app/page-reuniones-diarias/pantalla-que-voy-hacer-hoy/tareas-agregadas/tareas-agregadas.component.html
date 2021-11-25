@@ -1,0 +1,17 @@
+<div class="contenedorTareasAgregadasActuales ">
+    <div>
+        <mat-selection-list *ngFor="let opcion of this.instancia.tareaAgregada">
+            <div class="tareasAgregadasActuales">
+                <div>
+                    <li>
+                        {{opcion}}
+                    </li>
+                </div>
+                <div>
+                    <button (click)="this.instancia.quitar(opcion)" type="button" class="btn btn-danger">Quitar</button>
+                </div>
+            </div>
+        </mat-selection-list>
+    </div>
+</div>
+

@@ -11,6 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PageReunionesService } from './services/page-reuniones.service';
 import { MatListModule } from '@angular/material/list';
+import { SharedModule } from '../shared/shared.module';
+import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component';
+import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component'; 
+
 
 
 @NgModule({
@@ -18,8 +22,11 @@ import { MatListModule } from '@angular/material/list';
     PantallaPrincipalComponent,
     PantallaQueVoyHacerHoyComponent,
     PantallaQueHiceAyerComponent,
-    PantallaDificultadesQuePreveoComponent
+    PantallaDificultadesQuePreveoComponent,
+    PopUpCargarTareaComponent,
+    TareasAgregadasComponent
   ],
+  exports: [PantallaQueVoyHacerHoyComponent,PantallaQueHiceAyerComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -30,11 +37,11 @@ import { MatListModule } from '@angular/material/list';
     ReactiveFormsModule,
     MatListModule
   ],
-  exports: [
-    PantallaQueHiceAyerComponent
-  ],
   providers: [
-    PageReunionesService
+    PageReunionesService,
+    MatListModule,
+    SharedModule,
+    CommonModule
   ]
 })
 export class PageReunionesDiariasModule { }

@@ -1,1 +1,32 @@
-<p>pantalla-que-voy-hacer-hoy works!</p>
+<app-navbar-usuario></app-navbar-usuario>
+<br>
+<h4 style="margin-left: 5%;">Bienvenido al proyecto Reuniones de sincronización</h4>
+<hr>
+<div class="contenedor">
+    <div class="formTareas">
+        <div style="display: flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h6>¿Que voy hacer hoy?</h6>
+            </div>
+            <div>
+                <!-- Te abre un pop up, para que cargues una nueva tarea y simula hacer un post -->
+                <app-pop-up-cargar-tarea></app-pop-up-cargar-tarea>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="input-group">
+            <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+                #txtBuscar>
+                <option selected>
+                    ingrese la tarea...</option>
+                <option *ngFor="let opcion of opciones">
+                    {{opcion}}
+                </option>
+            </select>
+            <button class="btn btn-outline-secondary" type="button" (click)="agregarTarea()">Agregar tarea</button>
+        </div>
+        <!-- Agregan/asigna las tareas y te muestra en una lista las tareas que vas agregando. -->
+        <app-tareas-agregadas></app-tareas-agregadas>
+    </div>
+</div>
