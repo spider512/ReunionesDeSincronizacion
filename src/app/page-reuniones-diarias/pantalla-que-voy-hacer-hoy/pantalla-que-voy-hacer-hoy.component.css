@@ -4,25 +4,8 @@
     
 }
 
-.elementosAgregados {
-    margin: 20px;
-    padding: 20px;
-
-
-}
-
 .formTareas
 {
     width: 60%;
-
 }
-.elementosTareasAgregadas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* .elementosAgregados div {
-    background-color: royalblue;
-} */
+    

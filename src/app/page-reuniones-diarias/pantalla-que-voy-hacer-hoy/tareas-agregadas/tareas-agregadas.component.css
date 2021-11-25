@@ -1,0 +1,10 @@
+.contenedorTareasAgregadasActuales {
+    margin: 20px;
+    padding: 20px;
+}
+
+.tareasAgregadasActuales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

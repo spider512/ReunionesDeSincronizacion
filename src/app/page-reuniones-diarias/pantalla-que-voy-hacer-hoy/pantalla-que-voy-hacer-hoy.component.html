@@ -11,7 +11,6 @@
             </div>
             <div>
                 <app-pop-up-cargar-tarea></app-pop-up-cargar-tarea>
-                <!-- <button (click)="abrirPopUp()" type="button" class="btn btn-outline-secondary">Cargar tarea</button> -->
             </div>
         </div>
         <hr>
@@ -25,28 +24,11 @@
                 </option>
             </select>
             <button class="btn btn-outline-secondary" type="button" (click)="agregarTarea()">Agregar tarea</button>
-            
+
 
         </div>
-
-
-
-        <div class="elementosAgregados ">
-            <div>
-                <mat-selection-list *ngFor="let opcion of tareaAgregada">
-                    <div class="elementosTareasAgregadas">
-                        <div>
-                            <li>
-                                {{opcion}}
-                            </li>
-                        </div>
-                        <div>
-                            <button (click)="quitar(opcion)" type="button" class="btn btn-danger">Quitar</button>
-                        </div>
-                    </div>
-                </mat-selection-list>
-            </div>
-        </div>
+        
+        <app-tareas-agregadas></app-tareas-agregadas>
 
     </div>
 </div>

@@ -6,7 +6,8 @@ import { PantallaQueHiceAyerComponent } from './pantalla-que-hice-ayer/pantalla-
 import { PantallaDificultadesQuePreveoComponent } from './pantalla-dificultades-que-preveo/pantalla-dificultades-que-preveo.component';
 import { SharedModule } from '../shared/shared.module';
 import {MatListModule} from '@angular/material/list';
-import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component'; 
+import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component';
+import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component'; 
 
 
 
@@ -16,7 +17,8 @@ import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-c
     PantallaQueVoyHacerHoyComponent,
     PantallaQueHiceAyerComponent,
     PantallaDificultadesQuePreveoComponent,
-    PopUpCargarTareaComponent
+    PopUpCargarTareaComponent,
+    TareasAgregadasComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent],
   imports: [
