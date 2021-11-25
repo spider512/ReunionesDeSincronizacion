@@ -12,6 +12,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ReunionDiariaComponent } from './reunion-diaria/reunion-diaria.component';
 import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -36,7 +37,8 @@ import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform
     PageReunionesDiariasModule,
     NoopAnimationsModule,
     PageReunionesDiariasModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

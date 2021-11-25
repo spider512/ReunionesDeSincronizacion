@@ -1,19 +1,13 @@
-
-<router-outlet ></router-outlet>
-<!-- <app-login *ngIf="!auth.isLogged()"></app-login>  -->
-<!-- <footer>
-    <app-footer></app-footer>
-</footer> -->
-
-<!-- <header>
-    <app-header></app-header>
-</header>
-
+<!-- <div id="main">
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+</div> -->
 <main>
-    <app-pantalla-que-hice-ayer></app-pantalla-que-hice-ayer>
+    <app-login *ngIf="!auth.isLogged()"></app-login>
+    <router-outlet *ngIf="auth.isLogged()"></router-outlet>
 </main>
 
-<!-- <app-login *ngIf="!auth.isLogged()"></app-login>
-<footer>
+<footer class="footer">
     <app-footer></app-footer>
-</footer> -->
+</footer>
