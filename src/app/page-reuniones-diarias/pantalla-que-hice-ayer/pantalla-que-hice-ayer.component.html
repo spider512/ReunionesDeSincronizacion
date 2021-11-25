@@ -35,7 +35,9 @@
 
                     <mat-selection-list #selecTareas>
                         <mat-list-option *ngFor="let tarea of tareas">
-                            {{tarea.nombre}}
+                            <li>
+                                {{tarea.nombre}}
+                            </li>
                         </mat-list-option>
                     </mat-selection-list>
 
