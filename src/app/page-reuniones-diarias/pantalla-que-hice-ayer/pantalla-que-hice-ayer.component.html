@@ -1,18 +1,6 @@
-<!-- <div class="padre">
-    <div class="side1">
-        side
-    </div>
-
-    <div class="centro">
-        <h1 class="titulo">Bienvenido al proyecto Reuniones de Sincronización</h1>
-    </div>
-
-    <div class="side2">
-        side
-    </div>
-</div> -->
 <app-navbar-usuario></app-navbar-usuario>
-<mat-grid-list cols="10" rowHeight="100vh" class="main">
+
+<!-- <mat-grid-list cols="10" rowHeight="100vh" class="main">
     <mat-grid-tile colspan="1" rowspan="1" class="tileCustom"></mat-grid-tile>
 
     <mat-grid-tile colspan="8" rowspan="1">
@@ -52,4 +40,58 @@
     </mat-grid-tile>
 
     <mat-grid-tile colspan=" 1" rowspan="1" class="tileCustom"></mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<br>
+<h4 style="margin-left: 5%;">Bienvenido al proyecto Reuniones de sincronización</h4>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+
+        <div class="col-10">
+            <div style="display: flex; align-items: center; ">
+                <h6 style="margin: 0px;">¿Que hice ayer?</h6>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="forms">
+
+                <form action="" (ngSubmit)="agregar()">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <mat-form-field appearance="outline" style="font-size: 14px;">
+                                <mat-label>Ingrese tarea</mat-label>
+                                <input matInput type="text" name="tarea" [(ngModel)]="nuevo.nombre">
+                            </mat-form-field>
+                        </div>
+
+                        <div>
+                            <button mat-flat-button color="primary">Agregar tarea</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="list">
+                <mat-selection-list #selecTareas>
+                    <mat-list-option *ngFor="let tarea of tareas">
+                        <li>
+                            {{tarea.nombre}}
+                        </li>
+                    </mat-list-option>
+                </mat-selection-list>
+
+                <p style="margin-top: 20px;">
+                    Tareas seleccionadas: {{selecTareas.selectedOptions.selected.length}}
+                </p>
+            </div>
+        </div>
+
+        <div class="col"></div>
+    </div>
+</div>

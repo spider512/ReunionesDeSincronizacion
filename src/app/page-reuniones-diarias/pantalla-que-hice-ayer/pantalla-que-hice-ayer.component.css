@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.mat-form-field {
+    width: 600px;
+}
+
 .tileMain {
     align-items: flex-start;
     justify-content: flex-start;
