@@ -28,9 +28,13 @@ export class PantallaQueVoyHacerHoyComponent {
 
 
   }
-  agregarTarea() {
+
+  agregarTareaHoy(tarea: string) {
+    this.tareaAgregada.push(tarea)
+  }
+  botonAgregarTarea() {
     const valor = this.txtBuscar.nativeElement.value
-    if (valor !== 'ingrese la tarea...') {
+    if (valor !== 'ingrese la tarea precargada...') {
       this.tareaAgregada.push(valor)
       this.opciones = this.opciones.filter((opcionesNuevas) => opcionesNuevas !== valor)
     }

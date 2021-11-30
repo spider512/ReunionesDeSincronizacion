@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Cargar tarea
+    Cargar nueva tarea
 </button>
 
 <!-- Modal -->
@@ -25,7 +25,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" (click)="nuevo()" class="btn btn-primary">Guardar</button>
+                <button type="button" (click)="precargarTarea()" class="btn btn-primary">Precargar tarea</button>
+                <button type="button" (click)="agregarTareaHoy()" class="btn btn-primary">Agregar tarea para hoy</button>
             </div>
         </div>
     </div>
