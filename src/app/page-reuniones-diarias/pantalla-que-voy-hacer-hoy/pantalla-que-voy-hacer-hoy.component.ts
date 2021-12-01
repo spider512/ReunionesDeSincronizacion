@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,6 +17,8 @@ export class PantallaQueVoyHacerHoyComponent {
 
 
   constructor() { }
+
+  
 
   cargarTarea(tarea: string) {
     this.opciones.push(tarea)

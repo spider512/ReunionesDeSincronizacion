@@ -10,7 +10,7 @@ import { PantallaQueVoyHacerHoyComponent } from './page-reuniones-diarias/pantal
 import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
-  { path: "", component: InicioComponent },
+  { path: "inicio", component: InicioComponent },
   { path: "reunion-diaria", component: ReunionDiariaComponent },
   { path: "principal", component: PantallaPrincipalComponent },
   { path: "ayer", component: PantallaQueHiceAyerComponent },

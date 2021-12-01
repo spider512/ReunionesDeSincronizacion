@@ -1,0 +1,23 @@
+.contenedorVolverTitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedorVolverTitulo div h4 {
+    width: 100%;
+    margin-left: 50px;
+}
+
+.contenedorVolverTitulo button {
+    margin-right: 10px;
+
+}
+
+@media screen and (max-width: 414px) {
+    .contenedorVolverTitulo div h4 {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+}

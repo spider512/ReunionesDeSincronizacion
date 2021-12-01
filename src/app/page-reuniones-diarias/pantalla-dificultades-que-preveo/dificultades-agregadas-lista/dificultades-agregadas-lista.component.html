@@ -1,0 +1,17 @@
+<div class="contenedorTareasAgregadasActuales ">
+    <div>
+        <mat-selection-list *ngFor="let opcion of this.PantallaDificultadesQuePreveoComponent.listaDificultades">
+            <div class="tareasAgregadasActuales">
+                <div>
+                    <li>
+                        {{opcion}}
+                    </li>
+                </div>
+                <div>
+                    <button (click)="this.PantallaDificultadesQuePreveoComponent.eliminarDificultad(opcion)" type="button" class="btn btn-danger">Quitar</button>
+                </div>
+            </div>
+        </mat-selection-list>
+    </div>
+</div>
+

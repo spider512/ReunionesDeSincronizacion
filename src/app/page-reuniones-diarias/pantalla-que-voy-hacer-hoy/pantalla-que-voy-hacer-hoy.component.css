@@ -1,26 +1,10 @@
 .contenedor {
     display: flex;
     justify-content: center;
-    
+
 }
 
-.formTareas
-{
+.formTareas {
     width: 60%;
 }
 
-.contenedorVolverTitulo
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contenedorVolverTitulo div h4
-{
-    width: 100%;
-}
-.btn .btn-outline-secondary
-{
-    color:'red'
-}
