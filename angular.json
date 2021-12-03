@@ -37,7 +37,7 @@
                             "src/styles.css",
                             "src/app/hur-theme.css"
                         ],
-                        "scripts": []
+                        "scripts": ["src/assets/md5.min.js"]
                     },
                     "configurations": {
                         "production": {
@@ -103,7 +103,7 @@
                             "src/styles.css",
                             "src/app/hur-theme.css"
                         ],
-                        "scripts": []
+                        "scripts": ["src/assets/md5.min.js"]
                     }
                 }
             }
