@@ -43,7 +43,7 @@
 </mat-grid-list> -->
 
 <br>
-<div class="container" style="margin: 0px;">
+<div class="container-fluid" style="margin: 0px;">
     <div class="row">
 
         <div class="col"></div>
@@ -57,13 +57,13 @@
     </div>
 </div>
 <hr>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col"></div>
 
-        <div class="col-10">
+        <div class="col-6">
             <div style="display: flex; align-items: center; ">
-                <h6 style="margin: 0px;">¿Que hice ayer?</h6>
+                <h2 style="margin: 0px; font-size: 20px;">¿Que hice ayer?</h2>
             </div>
 
             <hr>
@@ -73,16 +73,18 @@
 
                 <form action="" (ngSubmit)="agregar()">
 
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <mat-form-field appearance="outline" style="font-size: 14px;">
+                    <div class="container-fluid" style="padding: 0px; display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 80%; margin-right: 20px;">
+                            <mat-form-field appearance="outline" style="width:100%; font-size: 14px;">
                                 <mat-label>Ingrese tarea</mat-label>
                                 <input matInput type="text" name="tarea" [(ngModel)]="nuevo.nombre">
                             </mat-form-field>
                         </div>
 
-                        <div>
-                            <button mat-flat-button color="primary">Agregar tarea</button>
+                        <div style="display: flex;">
+                            <div>
+                                <button mat-flat-button color="primary">Agregar tarea</button>
+                            </div>
                         </div>
                     </div>
                 </form>

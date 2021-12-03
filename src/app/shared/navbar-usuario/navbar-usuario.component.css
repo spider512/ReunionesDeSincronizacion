@@ -9,13 +9,17 @@
     align-items: center;
 } */
 
-.navbarGeneral {
+.navbar {
     width: 100%;
     height: 60px;
     background-color: #3FA948;
     margin: 0px;
     padding: 0px;
+}
+
+.headerMain {
     justify-content: space-between;
+    align-items: center;
 }
 
 .navMain {
