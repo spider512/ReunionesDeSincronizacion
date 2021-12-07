@@ -33,7 +33,7 @@ export class AuthService {
 
       let urlParams = new URLSearchParams();
       urlParams.append('usuario', usuario);
-      urlParams.append('password', md5(pwd.toUpperCase()));
+      urlParams.append('password', md5(pwd).toUpperCase());
       urlParams.append('modulo', sistema);
       let params: string = `${this.UrlAuth}/${usuario}?${urlParams.toString()}`;
 
@@ -61,8 +61,9 @@ export class AuthService {
             headers = headers.append('Content-Type', 'application/json');
 
             this.headers = headers;
-
+            console.log(this.headers);
             console.log(this.loginInfo.sesion);
+            console.log(this.loginInfo);
 
             resolve(d);
           }
