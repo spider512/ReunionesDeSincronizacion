@@ -1,6 +1,6 @@
 <div class="contenedorCuadrado">
-    <div class="cuadrado">
-        <div class="row">
+    <div class="cuadrado" fxLayout="row">
+        <div class="row" fxLayoutAlign="center center">
             <mat-form-field appearance="legacy" class="fuentesCampos">
                 <mat-label>
                     Usuario
@@ -13,7 +13,7 @@
                 <mat-label>
                     Contraseña
                 </mat-label>
-                <input matInput placeholder="Password" [(ngModel)]="password" name="password" required>
+                <input matInput placeholder="Password" type="password" [(ngModel)]="password" name="password" required>
             </mat-form-field>
         </div>
         <button mat-raised-button color="primary" class="fuentesBoton" (click)="login()">
