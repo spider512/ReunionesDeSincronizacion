@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class PantallaQueVoyHacerHoyComponent {
 
   constructor() { }
 
+  
+
   cargarTarea(tarea: string) {
     this.opciones.push(tarea)
   }
@@ -28,9 +31,13 @@ export class PantallaQueVoyHacerHoyComponent {
 
 
   }
-  agregarTarea() {
+
+  agregarTareaHoy(tarea: string) {
+    this.tareaAgregada.push(tarea)
+  }
+  botonAgregarTarea() {
     const valor = this.txtBuscar.nativeElement.value
-    if (valor !== 'ingrese la tarea...') {
+    if (valor !== 'ingrese la tarea precargada...') {
       this.tareaAgregada.push(valor)
       this.opciones = this.opciones.filter((opcionesNuevas) => opcionesNuevas !== valor)
     }

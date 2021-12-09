@@ -12,12 +12,25 @@ export class PopUpCargarTareaComponent {
 
   @ViewChild('inputCargarTarea') inputCargarTarea!: ElementRef<HTMLInputElement>;
 
-  nuevo() {
-    if (this.inputCargarTarea.nativeElement.value.length !== 0 )
-    {
-      this.pantallaQueVoyHacerHoyComponent.cargarTarea(this.inputCargarTarea.nativeElement.value)
-      this.inputCargarTarea.nativeElement.value = ''
+
+
+  // Podes precargar una tarea o cargarla
+
+
+  precargarTarea() {
+    var tareaNueva: string = this.inputCargarTarea.nativeElement.value
+    if (tareaNueva.length !== 0) {
+      this.pantallaQueVoyHacerHoyComponent.cargarTarea(tareaNueva)
     }
+    this.inputCargarTarea.nativeElement.value = ''
+  }
+
+  agregarTareaHoy() {
+    var tareaNueva: string = this.inputCargarTarea.nativeElement.value
+    if (tareaNueva.length !== 0) {
+      this.pantallaQueVoyHacerHoyComponent.agregarTareaHoy(tareaNueva)
+    }
+    this.inputCargarTarea.nativeElement.value= ''
   }
 
 }

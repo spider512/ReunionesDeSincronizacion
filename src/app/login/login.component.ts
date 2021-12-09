@@ -1,5 +1,7 @@
-import { Component, OnInit,NgModule } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { IoService } from '../shared/io.service';
 
 
 @Component({
@@ -12,16 +14,31 @@ export class LoginComponent implements OnInit {
 
 	public password?: string;
 
-	constructor(public auth: AuthService) { }
+	constructor(public auth: AuthService, public ruta: Router, public io: IoService) { }
 
 	ngOnInit(): void {
 	}
 
-	public login() {
+	async login() {
 		if (this.username && this.password) {
-			this.auth.login(this.username, this.password);
-			console.log(this.auth.loginInfo);
-		}
-	}
+			try {
+				this.auth.loginInfo = await this.auth.login(this.username, this.password);
+				console.log(this.auth.loginInfo);
+				this.ruta.navigate(['/inicio'])
 
+				let proyectos = this.io.proyectos();
+
+				console.log(proyectos);
+
+
+			}
+
+			catch (error) {
+				console.log(error);
+			}
+
+
+		}
+
+	}
 }

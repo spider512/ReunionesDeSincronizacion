@@ -13,7 +13,8 @@ import { PageReunionesService } from './services/page-reuniones.service';
 import { MatListModule } from '@angular/material/list';
 import { SharedModule } from '../shared/shared.module';
 import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component';
-import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component'; 
+import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component';
+import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component'; 
 
 
 
@@ -24,7 +25,8 @@ import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-ag
     PantallaQueHiceAyerComponent,
     PantallaDificultadesQuePreveoComponent,
     PopUpCargarTareaComponent,
-    TareasAgregadasComponent
+    TareasAgregadasComponent,
+    DificultadesAgregadasListaComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent,PantallaQueHiceAyerComponent],
   imports: [

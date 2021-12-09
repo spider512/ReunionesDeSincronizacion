@@ -13,6 +13,7 @@ import { ReunionDiariaComponent } from './reunion-diaria/reunion-diaria.componen
 import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,7 +39,8 @@ import { SharedModule } from './shared/shared.module';
     NoopAnimationsModule,
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
