@@ -36,7 +36,6 @@ export class AuthService {
       urlParams.append('password', md5(pwd).toUpperCase());
       urlParams.append('modulo', sistema);
       let params: string = `${this.UrlAuth}/${usuario}?${urlParams.toString()}`;
-      console.log(this.headers)
       this.http.get(params, this.options)
         .subscribe(data => {
           let d: any
@@ -60,9 +59,6 @@ export class AuthService {
             newHeaders = newHeaders.append('Content-Type', 'application/json');
             
             this.headers = newHeaders;
-            console.log(this.headers);
-            // console.log(this.loginInfo.sesion);
-            // console.log(this.loginInfo);
             
             resolve(d);
           }

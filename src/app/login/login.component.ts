@@ -26,9 +26,9 @@ export class LoginComponent implements OnInit {
 				// console.log(this.auth.loginInfo);
 				this.ruta.navigate(['/inicio'])
 
-				let proyectos = this.io.proyectos();
+				let proyectos = await this.io.proyectos();
 
-				// console.log(proyectos);
+				console.log(proyectos);
 
 
 			}
