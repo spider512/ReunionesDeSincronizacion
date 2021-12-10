@@ -34,11 +34,11 @@ import { SharedModule } from './shared/shared.module';
     MatInputModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    PageReunionesDiariasModule,
     NoopAnimationsModule,
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
