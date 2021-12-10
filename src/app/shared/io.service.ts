@@ -8,7 +8,9 @@ import { IProyecto } from './clases';
 })
 export class IoService {
 
-  constructor(public auth: AuthService,private http: HttpClient) { }
+  public loginInfo: any = this.auth.loginInfo;
+  
+  constructor(public auth: AuthService, private http: HttpClient) { }
 
   getEntidad(entidad: string, id?: number) {
     return new Promise((resolve, errorEvent) => {

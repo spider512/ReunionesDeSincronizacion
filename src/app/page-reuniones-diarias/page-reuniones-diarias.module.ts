@@ -14,7 +14,8 @@ import { MatListModule } from '@angular/material/list';
 import { SharedModule } from '../shared/shared.module';
 import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component';
 import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component';
-import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component'; 
+import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component';
+import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component'; 
 
 
 
@@ -26,7 +27,8 @@ import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que
     PantallaDificultadesQuePreveoComponent,
     PopUpCargarTareaComponent,
     TareasAgregadasComponent,
-    DificultadesAgregadasListaComponent
+    DificultadesAgregadasListaComponent,
+    SeleccionarProyectoComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent,PantallaQueHiceAyerComponent],
   imports: [
