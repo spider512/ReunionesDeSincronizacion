@@ -36,11 +36,10 @@ export class AuthService {
       urlParams.append('password', md5(pwd).toUpperCase());
       urlParams.append('modulo', sistema);
       let params: string = `${this.UrlAuth}/${usuario}?${urlParams.toString()}`;
-
+      console.log(this.headers)
       this.http.get(params, this.options)
         .subscribe(data => {
           let d: any
-          // console.log(data);
           if (typeof data === 'object')
             d = data
           else
@@ -48,23 +47,23 @@ export class AuthService {
 
           if (d.length > 0)
             d = d[0];
-
+    
           if (d.mensaje)
             errorEvent(d)
           else {
             this.loginInfo = d;
             this.prefix = sistema;
 
-            let headers = new HttpHeaders();
-            headers = headers.append('x-sesion', this.loginInfo.sesion);
-            headers = headers.append('x-prefix', this.prefix);
-            headers = headers.append('Content-Type', 'application/json');
-
-            this.headers = headers;
+            let newHeaders = new HttpHeaders();
+            newHeaders = newHeaders.append('x-sesion', this.loginInfo.sesion);
+            newHeaders = newHeaders.append('x-prefix', this.prefix);
+            newHeaders = newHeaders.append('Content-Type', 'application/json');
+            
+            this.headers = newHeaders;
             console.log(this.headers);
-            console.log(this.loginInfo.sesion);
-            console.log(this.loginInfo);
-
+            // console.log(this.loginInfo.sesion);
+            // console.log(this.loginInfo);
+            
             resolve(d);
           }
         }, error => {
