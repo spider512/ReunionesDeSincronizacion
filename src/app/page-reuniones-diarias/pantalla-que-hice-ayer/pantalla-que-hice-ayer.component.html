@@ -1,18 +1,6 @@
-<!-- <div class="padre">
-    <div class="side1">
-        side
-    </div>
-
-    <div class="centro">
-        <h1 class="titulo">Bienvenido al proyecto Reuniones de Sincronización</h1>
-    </div>
-
-    <div class="side2">
-        side
-    </div>
-</div> -->
 <app-navbar-usuario></app-navbar-usuario>
-<mat-grid-list cols="10" rowHeight="100vh" class="main">
+
+<!-- <mat-grid-list cols="10" rowHeight="100vh" class="main">
     <mat-grid-tile colspan="1" rowspan="1" class="tileCustom"></mat-grid-tile>
 
     <mat-grid-tile colspan="8" rowspan="1">
@@ -52,4 +40,90 @@
     </mat-grid-tile>
 
     <mat-grid-tile colspan=" 1" rowspan="1" class="tileCustom"></mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<br>
+<div class="container-fluid" style="margin: 0px;">
+    <div class="row">
+
+        <div class="col"></div>
+
+        <div class="col-9">
+            <h4 style="margin-bottom: 0px;">Reuniones de sincronización</h4>
+        </div>
+
+        <div class="col"></div>
+
+    </div>
+</div>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"></div>
+
+        <div class="col-6">
+            <div style="display: flex; align-items: center; ">
+                <h2 style="margin: 0px; font-size: 20px;">¿Que hice ayer?</h2>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="forms">
+
+                <form action="" (ngSubmit)="agregar()">
+
+                    <div class="container-fluid" style="padding: 0px; display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 80%; margin-right: 20px;">
+                            <mat-form-field appearance="outline" style="width:100%; font-size: 14px;">
+                                <mat-label>Ingrese tarea</mat-label>
+                                <input matInput type="text" name="tarea" [(ngModel)]="nuevo.nombre">
+                            </mat-form-field>
+                        </div>
+
+                        <div style="display: flex;">
+                            <div>
+                                <button mat-flat-button color="primary">Agregar tarea</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="list">
+                <mat-selection-list #selecTareas>
+                    <mat-list-option *ngFor="let tarea of tareas">
+                        <li>
+                            {{tarea.nombre}}
+                        </li>
+                    </mat-list-option>
+                </mat-selection-list>
+
+                <p style="margin-top: 20px;">
+                    Tareas seleccionadas: {{selecTareas.selectedOptions.selected.length}}
+                </p>
+            </div>
+
+
+            <div class="row" style="margin-top: 60px;">
+                <div class="col" style="display: flex;">
+                    <div class="">
+                        <button mat-button color="primary">Cancelar</button>
+                    </div>
+
+                    <div class="" style="margin-left: 20px;">
+                        <button mat-flat-button color="primary">Finalizar</button>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col"></div>
+    </div>
+</div>

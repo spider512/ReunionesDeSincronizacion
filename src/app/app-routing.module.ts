@@ -7,10 +7,9 @@ import { PantallaPrincipalComponent } from './page-reuniones-diarias/pantalla-pr
 import { PantallaQueHiceAyerComponent } from './page-reuniones-diarias/pantalla-que-hice-ayer/pantalla-que-hice-ayer.component';
 import { PantallaDificultadesQuePreveoComponent } from './page-reuniones-diarias/pantalla-dificultades-que-preveo/pantalla-dificultades-que-preveo.component';
 import { PantallaQueVoyHacerHoyComponent } from './page-reuniones-diarias/pantalla-que-voy-hacer-hoy/pantalla-que-voy-hacer-hoy.component';
-import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
-  { path: "inicio", component: InicioComponent },
+  { path: "", component: PantallaPrincipalComponent },
   { path: "reunion-diaria", component: ReunionDiariaComponent },
   { path: "principal", component: PantallaPrincipalComponent },
   { path: "ayer", component: PantallaQueHiceAyerComponent },
