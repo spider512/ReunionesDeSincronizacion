@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
+import { PageReunionesService } from '../services/page-reuniones.service';
 
 @Component({
   selector: 'app-pantalla-principal',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PantallaPrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router, public page:PageReunionesService) { }
 
   ngOnInit(): void {
+  }
+
+  ayer() {
+    this.router.navigate([`/ayer`]);
+  }
+
+  hoy() {
+    this.router.navigate([`/hoy`]);
+  }
+
+  dificultades() {
+    this.router.navigate([`/dificultades`]);
+  }
+
+  reunionDiaria() {
+    this.router.navigate([`/reunion-diaria`]);
   }
 
 }

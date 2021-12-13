@@ -1,10 +1,17 @@
 .contenedor {
     display: flex;
     justify-content: center;
-
+    
 }
 
-.formTareas {
+.formTareas
+{
     width: 60%;
 }
+    
 
+.agregar-tarea-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

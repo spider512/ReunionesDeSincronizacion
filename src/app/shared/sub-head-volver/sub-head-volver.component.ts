@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Location} from '@angular/common';
+import { PageReunionesService } from '../../page-reuniones-diarias/services/page-reuniones.service';
 
 @Component({
   selector: 'app-sub-head-volver',
@@ -8,10 +9,11 @@ import { Router } from '@angular/router';
 })
 export class SubHeadVolverComponent {
 
-  constructor(public ruta: Router) { }
+  constructor(private ruta: Location, public Reuniones: PageReunionesService) { }
+
 
 
   volverAtras() {
-    this.ruta.navigate(['/inicio'])
+    this.ruta.back()
   }
 }

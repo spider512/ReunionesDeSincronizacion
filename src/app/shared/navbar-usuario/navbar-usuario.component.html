@@ -1,4 +1,4 @@
-<div class="navBar">
+<!-- <div class="navBar">
 
     <div class="municipio">
         <p>Municipio de Hurlingham</p>
@@ -23,4 +23,82 @@
         </div>
 
     </div>
+</div> -->
+
+<!--
+<div class="container">
+    <div class="row">
+
+        <div class="col"></div>
+
+        <div class="col-11" style="display: flex;">
+            <div class="municipio">
+                <h1 style="margin-bottom: 0px;">Municipio de Hurlingham</h1>
+            </div>
+
+            <div class="contenedor" style="display: flex;">
+
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Leandroealmirón
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Mis proyectos</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="avatar">
+                    <div>LA</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col"></div>
+
+    </div>
+</div> -->
+
+<div class="container-fluid" style="padding: 0px; height: 60px;">
+    <nav class="navbar navbarGeneral">
+
+
+
+        <div class="col"></div>
+
+        <div class="col-11 headerMain" style="display: flex;">
+            <div class="municipio">
+                <h1 class="tituloMunicipio">Municipio de Hurlingham</h1>
+            </div>
+
+            <div class="contenedor" style="display: flex;">
+
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{auth.loginInfo.login}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Mis proyectos</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="avatar">
+                    <img src="/assets/avatars/{{this.auth.loginInfo.av}}.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col"></div>
+
+
+
+
+
+    </nav>
 </div>

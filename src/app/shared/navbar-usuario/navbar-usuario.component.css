@@ -1,4 +1,4 @@
-.navBar {
+/* .navBar {
     width: 100%;
     height: 60px;
     background-color: #3FA948;
@@ -7,28 +7,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+} */
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #3FA948;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerMain {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMain {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .municipio {
-    color: whitesmoke;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 8%;
+    align-items: center;
+}
+
+.tituloMunicipio {
+    margin-bottom: 0px;
+    font-size: 32px;
 }
 
 
-.contenedor {
+/* .contenedor {
     display: inline-flex;
-}
+} */
 
-.dropdown {
-    border: none;
-    display: flex;
-}
 
 .avatar {
     display: flex;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     background: #ECE4E4;
     border-radius: 100px;
     justify-content: center;
@@ -36,8 +55,9 @@
 
 }
 
-.navBar p {
-    font-size: 30px;
+.dropdown {
+    border: none;
+    display: flex;
 }
 
 #dropdownMenuButton1 {
@@ -46,12 +66,18 @@
     border: none;
 }
 
+.navBar p {
+    font-size: 30px;
+}
+
+
 @media only screen and (max-width: 588px) {
-    .navBar p {
-        font-size: 20px;
+    .tituloMunicipio {
+        margin-bottom: 0px;
+        font-size: 15px;
     }
 
-    .navBar .dropdown {
+    .dropdown {
         font-size: 11px;
     }
 }
