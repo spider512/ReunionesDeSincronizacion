@@ -21,8 +21,6 @@ export class IoService {
       else
         params = `${this.auth.UrlEntidad}/${entidad}`;
 
-      console.log(this.auth.headers);
-
       this.http.get(params, { headers: this.auth.headers })
         .subscribe((resultado: any) => {
           let d: any = resultado; //JSON.parse(resultado.toString())
