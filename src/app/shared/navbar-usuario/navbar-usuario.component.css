@@ -52,7 +52,7 @@
     border-radius: 100px;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .dropdown {
@@ -72,11 +72,12 @@
 
 
 @media only screen and (max-width: 588px) {
-    .navBar p {
-        font-size: 20px;
+    .tituloMunicipio {
+        margin-bottom: 0px;
+        font-size: 15px;
     }
 
-    .navBar .dropdown {
+    .dropdown {
         font-size: 11px;
     }
 }
