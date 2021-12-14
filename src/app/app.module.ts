@@ -35,12 +35,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    PageReunionesDiariasModule,
     NoopAnimationsModule,
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
     SharedModule,
+<<<<<<< HEAD
     HttpClientModule
+=======
+    FlexLayoutModule
+>>>>>>> 23ced9b6fc36de5ec7370e2f40963a9f2613b73e
   ],
   providers: [],
   bootstrap: [AppComponent]
