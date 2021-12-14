@@ -15,7 +15,8 @@ import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -40,7 +41,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+<<<<<<< HEAD
     FlexLayoutModule
+=======
+    FlexLayoutModule,
+    MatListModule,
+    MatIconModule
+>>>>>>> login
   ],
   providers: [],
   bootstrap: [AppComponent]

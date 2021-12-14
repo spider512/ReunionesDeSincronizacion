@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
+import { PageReunionesService } from '../services/page-reuniones.service';
 
 @Component({
   selector: 'app-pantalla-principal',
@@ -8,7 +9,7 @@ import {  Router } from '@angular/router';
 })
 export class PantallaPrincipalComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public page:PageReunionesService) { }
 
   ngOnInit(): void {
   }

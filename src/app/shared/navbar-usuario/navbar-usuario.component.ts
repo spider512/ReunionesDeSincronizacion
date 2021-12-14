@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
+import { IoService } from '../io.service';
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarUsuarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public io:IoService, public auth:AuthService) { }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,12 @@
+<app-navbar-usuario></app-navbar-usuario>
+<h1>Seleccione el proyecto</h1>
+
+<mat-selection-list [multiple]="false">
+    <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
+        <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+        <h3 mat-line>
+            {{p.n}}
+        </h3>
+        <p mat-line>{{p.d}}</p>
+    </mat-list-option>
+</mat-selection-list>

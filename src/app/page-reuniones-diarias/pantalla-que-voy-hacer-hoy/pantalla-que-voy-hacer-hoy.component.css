@@ -1,9 +1,25 @@
 .contenedor {
+    display: flex;
     justify-content: center;
+<<<<<<< HEAD
 }
+=======
+    
+}
+
+.formTareas
+{
+    width: 60%;
+}
+    
+>>>>>>> login
 
 .agregar-tarea-button {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> login

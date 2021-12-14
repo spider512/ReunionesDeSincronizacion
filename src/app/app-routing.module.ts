@@ -7,17 +7,23 @@ import { PantallaPrincipalComponent } from './page-reuniones-diarias/pantalla-pr
 import { PantallaQueHiceAyerComponent } from './page-reuniones-diarias/pantalla-que-hice-ayer/pantalla-que-hice-ayer.component';
 import { PantallaDificultadesQuePreveoComponent } from './page-reuniones-diarias/pantalla-dificultades-que-preveo/pantalla-dificultades-que-preveo.component';
 import { PantallaQueVoyHacerHoyComponent } from './page-reuniones-diarias/pantalla-que-voy-hacer-hoy/pantalla-que-voy-hacer-hoy.component';
+import { SeleccionarProyectoComponent } from './page-reuniones-diarias/seleccionar-proyecto/seleccionar-proyecto.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   { path: "", component: PantallaPrincipalComponent },
  // { path: "inicio", component: InicioComponent },
+=======
+  { path: "", component: SeleccionarProyectoComponent },
+  { path: "seleccionar-proyecto", component: SeleccionarProyectoComponent },
+>>>>>>> login
   { path: "reunion-diaria", component: ReunionDiariaComponent },
   { path: "principal", component: PantallaPrincipalComponent },
   { path: "ayer", component: PantallaQueHiceAyerComponent },
   { path: "dificultades", component: PantallaDificultadesQuePreveoComponent },
   { path: "hoy", component: PantallaQueVoyHacerHoyComponent },
   { path: "**", redirectTo: "" }
-  
+
 ];
 
 @NgModule({

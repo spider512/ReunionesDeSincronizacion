@@ -23,12 +23,12 @@ export class LoginComponent implements OnInit {
 		if (this.username && this.password) {
 			try {
 				this.auth.loginInfo = await this.auth.login(this.username, this.password);
-				console.log(this.auth.loginInfo);
-				this.ruta.navigate(['/inicio'])
+				// console.log(this.auth.loginInfo);
+				this.ruta.navigate(['/seleccionar-proyecto']);
 
-				let proyectos = this.io.proyectos();
+				// let proyectos = await this.io.proyectos();
 
-				console.log(proyectos);
+				// console.log(proyectos);
 
 
 			}

@@ -1,13 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { IProyecto } from './clases';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IoService {
-  http: any;
 
-  constructor(public auth: AuthService) { }
+  public loginInfo: any = this.auth.loginInfo;
+  
+  constructor(public auth: AuthService, private http: HttpClient) { }
 
   getEntidad(entidad: string, id?: number) {
     return new Promise((resolve, errorEvent) => {
@@ -17,8 +20,6 @@ export class IoService {
         params = `${this.auth.UrlEntidad}/${entidad}/{"id":${id}}`;
       else
         params = `${this.auth.UrlEntidad}/${entidad}`;
-
-console.log(params);
 
       this.http.get(params, { headers: this.auth.headers })
         .subscribe((resultado: any) => {
@@ -88,7 +89,7 @@ console.log(params);
 
   proyectos(id?: number) {
     let e: string = 'Proyectos';
-    return new Promise<any[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+    return new Promise<IProyecto[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as IProyecto[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
 }
