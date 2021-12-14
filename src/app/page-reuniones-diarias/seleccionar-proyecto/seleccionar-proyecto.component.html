@@ -1,5 +1,24 @@
 <app-navbar-usuario></app-navbar-usuario>
-<h1>Seleccione el proyecto</h1>
+
+<div class="container-fluid" style="padding: 0px;">
+    <div class="row subNavBar">
+
+        <div class="col"></div>
+
+        <div class="col-10 subHeader" style="display: flex;">
+            <div>
+                <h4 style="margin-bottom: 0px;">
+                    Seleccione el proyecto
+                </h4>
+            </div>
+        </div>
+
+        <div class="col"></div>
+
+    </div>
+</div>
+
+<hr>
 
 <mat-selection-list [multiple]="false">
     <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
