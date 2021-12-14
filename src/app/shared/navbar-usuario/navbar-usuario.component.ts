@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 import { IoService } from '../io.service';
 
@@ -8,11 +9,12 @@ import { IoService } from '../io.service';
   templateUrl: './navbar-usuario.component.html',
   styleUrls: ['./navbar-usuario.component.css']
 })
-export class NavbarUsuarioComponent implements OnInit {
+export class NavbarUsuarioComponent  {
 
-  constructor(public io:IoService, public auth:AuthService) { }
+  constructor(public io: IoService, public auth: AuthService, public ruta: Router){}
 
-  ngOnInit(): void {
+
+  irAProyectos() {
+    this.ruta.navigate(['/seleccionar-proyecto'])
   }
-
 }
