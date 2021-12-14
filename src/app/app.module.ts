@@ -39,11 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
     SharedModule,
-<<<<<<< HEAD
-    HttpClientModule
-=======
+    HttpClientModule,
     FlexLayoutModule
->>>>>>> 23ced9b6fc36de5ec7370e2f40963a9f2613b73e
   ],
   providers: [],
   bootstrap: [AppComponent]
