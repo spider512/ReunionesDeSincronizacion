@@ -10,13 +10,8 @@ import { PantallaQueVoyHacerHoyComponent } from './page-reuniones-diarias/pantal
 import { SeleccionarProyectoComponent } from './page-reuniones-diarias/seleccionar-proyecto/seleccionar-proyecto.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-  { path: "", component: PantallaPrincipalComponent },
- // { path: "inicio", component: InicioComponent },
-=======
   { path: "", component: SeleccionarProyectoComponent },
   { path: "seleccionar-proyecto", component: SeleccionarProyectoComponent },
->>>>>>> login
   { path: "reunion-diaria", component: ReunionDiariaComponent },
   { path: "principal", component: PantallaPrincipalComponent },
   { path: "ayer", component: PantallaQueHiceAyerComponent },

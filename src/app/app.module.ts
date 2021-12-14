@@ -41,13 +41,9 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-<<<<<<< HEAD
-    FlexLayoutModule
-=======
     FlexLayoutModule,
     MatListModule,
     MatIconModule
->>>>>>> login
   ],
   providers: [],
   bootstrap: [AppComponent]
