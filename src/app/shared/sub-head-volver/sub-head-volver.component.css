@@ -1,4 +1,4 @@
-.contenedorVolverTitulo {
+/* .contenedorVolverTitulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +12,19 @@
 .contenedorVolverTitulo button {
     margin-right: 10px;
 
+} */
+
+.subNavBar {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subHeader {
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width: 414px) {

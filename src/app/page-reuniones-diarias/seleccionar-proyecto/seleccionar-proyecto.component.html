@@ -1,12 +1,56 @@
 <app-navbar-usuario></app-navbar-usuario>
-<h1>Seleccione el proyecto</h1>
 
-<mat-selection-list [multiple]="false">
-    <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
-        <!-- <mat-icon mat-list-icon>home</mat-icon> -->
-        <h3 mat-line>
-            {{p.n}}
-        </h3>
-        <p mat-line>{{p.d}}</p>
-    </mat-list-option>
-</mat-selection-list>
+<div class="container-fluid" style="padding: 0px;">
+    <div class="row subNavBar">
+
+        <div class="col"></div>
+
+        <div class="col-10 subHeader" style="display: flex; height: 38px;">
+            <div>
+                <h4 style="margin-bottom: 0px;">
+                    Seleccione el proyecto
+                </h4>
+            </div>
+        </div>
+
+        <div class="col"></div>
+
+    </div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"></div>
+
+        <div class="col-8">
+
+            <mat-selection-list [multiple]="false">
+                <div mat-subheader>Proyectos</div>
+                <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
+
+                    <mat-icon mat-list-icon>home</mat-icon>
+
+                    <div mat-line>
+                        <h3 mat-line style="font-size: 18px; margin-bottom: 0px;">
+                            {{p.n}}
+                        </h3>
+                    </div>
+
+                    <div mat-line>
+                        <p mat-line style="margin-bottom: 0px;">
+                            {{p.d}}
+                        </p>
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                </mat-list-option>
+            </mat-selection-list>
+
+        </div>
+
+        <div class="col"></div>
+    </div>
+</div>

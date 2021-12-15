@@ -12,12 +12,12 @@ export class AuthService {
     throw new Error('Method not implemented.');
   }
   public loginInfo?: any;
-  
+
   constructor(private http: HttpClient) { }
   private server: string = environment.endpoint;
   private UrlAuth: string = this.server + 'Auth';
-  public  UrlEntidad: string = this.server + 'Entidad';
-  
+  public UrlEntidad: string = this.server + 'Entidad';
+
   public headers = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     //'Content-Type':  'application/json'

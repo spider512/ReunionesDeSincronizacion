@@ -31,3 +31,7 @@ h2 {
     padding: 40px 60px;
     /* background-color: rgba(196, 196, 196, 0.25); */
 }
+
+::ng-deep .mat-form-field-wrapper{
+    padding-bottom: 0px;
+}
