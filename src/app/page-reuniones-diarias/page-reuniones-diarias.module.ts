@@ -15,8 +15,8 @@ import { SharedModule } from '../shared/shared.module';
 import { PopUpCargarTareaComponent } from './pantalla-que-voy-hacer-hoy/pop-up-cargar-tarea/pop-up-cargar-tarea.component';
 import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-agregadas/tareas-agregadas.component';
 import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component';
-import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component'; 
-
+import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar
     DificultadesAgregadasListaComponent,
     SeleccionarProyectoComponent
   ],
-  exports: [PantallaQueVoyHacerHoyComponent,PantallaQueHiceAyerComponent],
+  exports: [PantallaQueVoyHacerHoyComponent, PantallaQueHiceAyerComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -40,7 +40,8 @@ import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    SharedModule
+    SharedModule,
+    MatIconModule
   ],
   providers: [
     PageReunionesService,
