@@ -35,3 +35,11 @@ h2 {
 ::ng-deep .mat-form-field-wrapper{
     padding-bottom: 0px;
 }
+
+.contenedorTareaBoton {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
