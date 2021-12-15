@@ -20,42 +20,6 @@
 
 <hr>
 
-
-
-<!-- <div class="container-fluid">
-    <div class="row">
-        <div class="col"></div>
-
-        <div class="col-8">
-
-            <mat-selection-list [multiple]="false">
-                <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
-
-                    <div style="display: flex;">
-                        <div style="align-items: center;">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-                        </div>
-
-                        <div>
-                            <h3 mat-line style="font-size: 18px; margin-bottom: 0px;">
-                                {{p.n}}
-                            </h3>
-                            <p mat-line style="margin-bottom: 0px;">{{p.d}}</p>
-                        </div>
-                    </div>
-
-                </mat-list-option>
-            </mat-selection-list>
-
-        </div>
-
-        <div class="col"></div>
-    </div>
-</div> -->
-
-
-
-
 <div class="container-fluid">
     <div class="row">
         <div class="col"></div>
@@ -63,6 +27,7 @@
         <div class="col-8">
 
             <mat-selection-list [multiple]="false">
+                <div mat-subheader>Proyectos</div>
                 <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
 
                     <mat-icon mat-list-icon>home</mat-icon>
@@ -78,6 +43,8 @@
                             {{p.d}}
                         </p>
                     </div>
+
+                    <mat-divider></mat-divider>
 
                 </mat-list-option>
             </mat-selection-list>
