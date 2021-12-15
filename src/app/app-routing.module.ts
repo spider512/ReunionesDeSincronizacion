@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //Componentes propios
-import { ReunionDiariaComponent } from './reunion-diaria/reunion-diaria.component';
 import { PantallaPrincipalComponent } from './page-reuniones-diarias/pantalla-principal/pantalla-principal.component';
 import { PantallaQueHiceAyerComponent } from './page-reuniones-diarias/pantalla-que-hice-ayer/pantalla-que-hice-ayer.component';
 import { PantallaDificultadesQuePreveoComponent } from './page-reuniones-diarias/pantalla-dificultades-que-preveo/pantalla-dificultades-que-preveo.component';
@@ -12,7 +11,6 @@ import { SeleccionarProyectoComponent } from './page-reuniones-diarias/seleccion
 const routes: Routes = [
   { path: "", component: SeleccionarProyectoComponent },
   { path: "seleccionar-proyecto", component: SeleccionarProyectoComponent },
-  { path: "reunion-diaria", component: ReunionDiariaComponent },
   { path: "principal", component: PantallaPrincipalComponent },
   { path: "ayer", component: PantallaQueHiceAyerComponent },
   { path: "dificultades", component: PantallaDificultadesQuePreveoComponent },
