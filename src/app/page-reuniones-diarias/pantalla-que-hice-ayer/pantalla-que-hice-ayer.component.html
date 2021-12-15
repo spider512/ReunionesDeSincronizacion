@@ -73,23 +73,20 @@
 
                 <form action="" (ngSubmit)="agregar()">
 
-                    <div class="container-fluid">
-
-                        <div style="padding: 0px; display: flex; justify-content: space-between;">
+                    <div class="container-fluid" style="padding: 0px; display: flex; justify-content: space-between;">
+                        <div class="contenedorTareaBoton">
                             <div style="display: flex; width: 80%; margin-right: 20px;">
-                                <mat-form-field appearance="outline" style="width:100%; font-size: 14px;">
+                                <mat-form-field appearance="outline" style="width:100%;padding:0%; font-size: 14px;">
                                     <mat-label>Ingrese tarea</mat-label>
                                     <input matInput type="text" name="tarea" [(ngModel)]="nuevo.nombre">
                                 </mat-form-field>
                             </div>
 
-                            <div style="display: flex;">
-                                <div>
-                                    <button mat-flat-button color="primary">Agregar tarea</button>
-                                </div>
+                            <div>
+                                <button mat-flat-button color="primary">Agregar tarea</button>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </form>
 
