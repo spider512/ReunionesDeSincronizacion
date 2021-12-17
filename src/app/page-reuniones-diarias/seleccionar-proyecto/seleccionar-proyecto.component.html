@@ -26,29 +26,23 @@
 
         <div class="col-8">
 
+
             <mat-selection-list [multiple]="false">
-                <div mat-subheader>Proyectos</div>
-                <mat-list-option role="listitem" *ngFor="let p of proyectos" (click)="seleccionarProyecto(p)">
-
+                <mat-list-item *ngFor="let proyecto of proyectos" (click)="seleccionarProyecto(proyecto)">
                     <mat-icon mat-list-icon>home</mat-icon>
-
-                    <div mat-line>
-                        <h3 mat-line style="font-size: 18px; margin-bottom: 0px;">
-                            {{p.n}}
-                        </h3>
-                    </div>
-
-                    <div mat-line>
-                        <p mat-line style="margin-bottom: 0px;">
-                            {{p.d}}
-                        </p>
-                    </div>
-
-                    <mat-divider></mat-divider>
-
-                </mat-list-option>
+                    <h3 mat-line> {{ proyecto.n }} </h3>
+                    <p mat-line>
+                        <span> {{ proyecto.d }} </span>
+                    </p>
+                    <div> {{ proyecto.e }} </div>
+                    <button mat-icon-button (click)="editar(proyecto)">
+                    <mat-icon class="mat-24">more_vert</mat-icon>
+                  </button>
+                </mat-list-item>
             </mat-selection-list>
-
+           
+            <br />
+            <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
         </div>
 
         <div class="col"></div>

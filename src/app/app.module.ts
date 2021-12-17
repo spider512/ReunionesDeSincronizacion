@@ -12,9 +12,14 @@ import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reunio
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyecto/editar-proyecto.component';
 
 
 
@@ -23,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     FooterComponent,
     LoginComponent,
+    EditarProyectoComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -39,7 +45,12 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     FlexLayoutModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
