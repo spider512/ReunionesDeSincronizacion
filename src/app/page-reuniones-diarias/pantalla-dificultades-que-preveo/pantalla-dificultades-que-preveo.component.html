@@ -1,4 +1,6 @@
+
 <app-navbar-usuario></app-navbar-usuario>
+<br>
 <app-sub-head-volver></app-sub-head-volver>
 <hr>
 <div class="contenedor">
@@ -11,9 +13,10 @@
         <hr>
         <br>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Ingrese alguna dificultad..." #dificultadInput>
-            <button class="btn btn-outline-secondary" type="button" (click)="agregarDificultad()">Agregar
-                dificultades</button>
+            <input type="text" class="form-control" 
+            placeholder="Ingrese alguna dificultad..."
+            #dificultadInput>
+            <button class="btn btn-outline-secondary" type="button" (click)="agregarDificultad()">Agregar dificultades</button>
         </div>
 
         <app-dificultades-agregadas-lista></app-dificultades-agregadas-lista>

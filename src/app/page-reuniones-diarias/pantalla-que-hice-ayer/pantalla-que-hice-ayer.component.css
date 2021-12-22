@@ -34,6 +34,8 @@ h2 {
 
 
 
+
+
 .contenedorTareaBoton {
 
     width: 100%;
@@ -42,6 +44,14 @@ h2 {
     align-items: center;
 }
 
-::ng-deep .mat-form-field-wrapper {
+::ng-deep .mat-form-field-wrapper{
     padding-bottom: 0px;
+}
+
+.contenedorTareaBoton {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

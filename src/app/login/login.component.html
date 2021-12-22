@@ -9,7 +9,7 @@
             </mat-form-field>
 
             <!--Ingreso de password-->
-            <mat-form-field appearance="legacy" class="fuentesCampos">
+            <mat-form-field appearance="legacy" class="fuentesCampos" (keyup.enter)="login()">
                 <mat-label>
                     Contraseña
                 </mat-label>

@@ -53,7 +53,7 @@ export class IoService {
     });
   }
   mensaje(mensaje: any) {
-    throw new Error('Method not implemented.');
+    throw new Error(mensaje);
   }
 
   setEntidad(entidad: string, param: any) {
@@ -90,6 +90,11 @@ export class IoService {
   proyectos(id?: number) {
     let e: string = 'Proyectos';
     return new Promise<IProyecto[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as IProyecto[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+  grabarProyecto(p:IProyecto){
+    let e: string = 'Proyectos';
+    return new Promise<IProyecto[]>((resolve, errorEvent) => { this.setEntidad(e, p).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
 }

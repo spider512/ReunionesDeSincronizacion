@@ -1,14 +1,3 @@
-/* .navBar {
-    width: 100%;
-    height: 60px;
-    background-color: #3FA948;
-    margin: 0%;
-    padding: 0%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-
 .navbar {
     width: 100%;
     height: 60px;
@@ -37,11 +26,6 @@
     margin-bottom: 0px;
     font-size: 32px;
 }
-
-
-/* .contenedor {
-    display: inline-flex;
-} */
 
 
 .avatar {
