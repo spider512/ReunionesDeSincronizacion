@@ -17,8 +17,9 @@ import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-ag
 import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component';
 import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     SharedModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule
   ],
   providers: [
     PageReunionesService,

@@ -1,20 +1,18 @@
 <app-navbar-usuario></app-navbar-usuario>
 
 <div class="container-fluid" style="padding: 0px;">
-    <div class="row subNavBar">
+    <div fxLayout="column">
+        <mat-toolbar color="accent">
+            <mat-toolbar-row>
+                <div fxFlex="20"></div>
 
-        <div class="col"></div>
+                <div fxFlex="60">
+                    <span>Seleccione el Proyecto</span>
+                </div>
 
-        <div class="col-10 subHeader" style="display: flex; height: 38px;">
-            <div>
-                <h4 style="margin-bottom: 0px;">
-                    Seleccione el proyecto
-                </h4>
-            </div>
-        </div>
-
-        <div class="col"></div>
-
+                <div fxFlex></div>
+            </mat-toolbar-row>
+        </mat-toolbar>
     </div>
 </div>
 
@@ -36,11 +34,11 @@
                     </p>
                     <div> {{ proyecto.e }} </div>
                     <button mat-icon-button (click)="editar(proyecto)">
-                    <mat-icon class="mat-24">more_vert</mat-icon>
-                  </button>
+                        <mat-icon class="mat-24">more_vert</mat-icon>
+                    </button>
                 </mat-list-item>
             </mat-selection-list>
-           
+
             <br />
             <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
         </div>
