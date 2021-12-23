@@ -7,3 +7,8 @@
 .formTareas {
     width: 60%;
 }
+
+.butonGrabar {
+    display: flex;
+    justify-content: center;
+}
