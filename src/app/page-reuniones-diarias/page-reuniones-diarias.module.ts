@@ -45,7 +45,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     SharedModule,
     MatIconModule,
     MatCheckboxModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [
     PageReunionesService,
