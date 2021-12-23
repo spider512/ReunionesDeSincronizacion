@@ -2,72 +2,59 @@
 
     <app-navbar-usuario></app-navbar-usuario>
 
-    <mat-toolbar color="accent">
-        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-            <!-- <div fxFlex="20"></div>
+    <mat-toolbar color="accent" style="margin-bottom: 32px;">
 
-            <div fxFlex="60" fxLayoutAlign="space-between center">
-                <span>Seleccione el Proyecto</span>
+        <div fxFlex="20"></div>
 
-                <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
-            </div>
+        <div fxFlex="60">
+            <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-            <div fxFlex></div> -->
+                <div>
+                    <span>Seleccione el Proyecto</span>
+                </div>
 
+                <div>
+                    <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
+                </div>
 
-            <div>
-                <span>Seleccione el Proyecto</span>
-            </div>
+            </mat-toolbar-row>
+        </div>
 
-            <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
+        <div fxFlex></div>
 
-        </mat-toolbar-row>
     </mat-toolbar>
 
-    <hr>
+
+
+
+
+
+    <!-- <mat-toolbar color="accent" style="margin-bottom: 32px;">
+        <mat-toolbar-row>
+
+            <div fxLayout="row" fxFill>
+                <div fxFlex="20"></div>
+
+                <div fxFlex="60" fxLayoutAlign="space-between center">
+                    <span>Seleccione el Proyecto</span>
+
+                    <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
+                </div>
+
+                <div fxFlex></div>
+            </div>
+
+        </mat-toolbar-row>
+    </mat-toolbar> -->
+
+
 
     <div class="container-fluid">
         <div class="row">
             <div class="col"></div>
 
             <div class="col-8">
-
-
-                <!-- <mat-selection-list [multiple]="false">
-                    <div *ngFor="let proyecto of proyectos">
-
-                        <mat-list-item (click)="seleccionarProyecto(proyecto)">
-                            <mat-icon mat-list-icon>home</mat-icon>
-                            <h3 mat-line> {{ proyecto.n }} </h3>
-                            <p mat-line>
-                                <span> {{ proyecto.d }} </span>
-                            </p>
-                        </mat-list-item>
-
-                        <div>
-
-                            <button mat-icon-button ([matMenuTriggerFor])="menuDesplegar"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-
-                            <mat-menu #menuDesplegar="matMenu">
-                                <button mat-menu-item>
-                                    <mat-icon>edit</mat-icon>
-                                    <span>Editar</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <mat-icon>delete</mat-icon>
-                                    <span>Eliminar</span>
-                                </button>
-                            </mat-menu>
-
-                        </div>
-
-                    </div>
-                </mat-selection-list> -->
-
 
                 <mat-selection-list [multiple]="false">
 
