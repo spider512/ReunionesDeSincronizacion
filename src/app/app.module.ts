@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
@@ -29,6 +29,7 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
     FooterComponent,
     LoginComponent,
     EditarProyectoComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,

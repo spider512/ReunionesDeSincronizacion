@@ -19,6 +19,7 @@ import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     SharedModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FlexLayoutModule
   ],
   providers: [
     PageReunionesService,

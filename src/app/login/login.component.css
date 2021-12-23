@@ -1,9 +1,8 @@
 .contenedorCuadrado {
-    display: flex;
+    
     justify-content: center;
     margin-top: auto ;
     padding: 16% ;
-    
   }
   
 .cuadrado {
@@ -14,11 +13,8 @@
     border: 1px solid #3FA948;
     box-sizing: border-box;
     border-radius: 30px;
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
     padding:5% ;
-  
 }
 
 .fuentesBoton {
@@ -30,9 +26,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .cuadrado {
-        display: block;
-    }
+
 
     .fuentesBoton {
         font-size: small
