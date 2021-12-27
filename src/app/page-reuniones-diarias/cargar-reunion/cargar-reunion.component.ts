@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IProblema, ITarea } from 'src/app/shared/clases';
 import { IoService } from 'src/app/shared/io.service';
+import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cargar-reunion',
@@ -15,7 +17,8 @@ export class CargarReunionComponent implements OnInit {
 
   public problemas: IProblema[] = [];
   public panelOpenState: boolean = false;
-  constructor(public io: IoService) { }
+
+  constructor(public dialog: MatDialog, public io: IoService) { }
 
   ngOnInit(): void {
   }
@@ -24,20 +27,32 @@ export class CargarReunionComponent implements OnInit {
 
   volver() { }
 
-  seleccionarTareaAyer(tareaAyerSeleccionada?: ITarea) {
+  async seleccionarTareaAyer(tareaAyerSeleccionada?: ITarea) {
     console.log(tareaAyerSeleccionada);
+
+
+
     if (tareaAyerSeleccionada) {
-      this.tareasAyer.push(tareaAyerSeleccionada);
-      let tareasTemp: ITarea[] = [];
-      this.tareasSinAsignar.forEach(t => {
-        if (t !== tareaAyerSeleccionada)
-          tareasTemp.push(t);
-      });
-      this.tareasSinAsignar = tareasTemp;
+
+      if (tareaAyerSeleccionada.id == -1) {
+
+        const nt = this.NuevaTarea();
+
+      }
+      else {
+        this.tareasAyer.push(tareaAyerSeleccionada);
+        let tareasTemp: ITarea[] = [];
+        this.tareasSinAsignar.forEach(t => {
+          if (t !== tareaAyerSeleccionada)
+            tareasTemp.push(t);
+        });
+        this.tareasSinAsignar = tareasTemp;
+      }
     }
   }
-  
-  removerAyer(tareaAyerSeleccionada ?: ITarea) {
+
+
+  removerAyer(tareaAyerSeleccionada?: ITarea) {
     console.log(tareaAyerSeleccionada);
     if (tareaAyerSeleccionada) {
       this.tareasSinAsignar.push(tareaAyerSeleccionada);
@@ -50,4 +65,21 @@ export class CargarReunionComponent implements OnInit {
     }
 
   }
+
+  NuevaTarea() {
+
+    const dialogRef = this.dialog.open(NuevaTareaComponent, {
+      // width: '250px',
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+      console.log(result);
+    });
+
+
+  }
+
+
 }

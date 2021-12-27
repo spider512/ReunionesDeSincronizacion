@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Nueva tarea</h1>
+<div mat-dialog-content>
+    <p>Describa brevemente la tarea</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre de la tarea</mat-label>
+        <input matInput [(ngModel)]="data.tarea">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cerrar</button>
+    <button mat-button [mat-dialog-close]="data.tarea" cdkFocusInitial>Agregar</button>
+</div>

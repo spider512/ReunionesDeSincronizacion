@@ -25,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NuevaTareaComponent } from './cargar-reunion/nueva-tarea/nueva-tarea.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     TareasAgregadasComponent,
     DificultadesAgregadasListaComponent,
     SeleccionarProyectoComponent,
-    CargarReunionComponent
+    CargarReunionComponent,
+    NuevaTareaComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent, PantallaQueHiceAyerComponent],
   imports: [

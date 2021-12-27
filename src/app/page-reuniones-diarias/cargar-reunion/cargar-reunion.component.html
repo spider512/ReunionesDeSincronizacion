@@ -40,7 +40,8 @@
                         <mat-form-field appearance="fill">
                             <mat-label>Agregar una tarea</mat-label>
                             <mat-select [(value)]="tareaAyerSeleccionada" (valueChange)="seleccionarTareaAyer(tareaAyerSeleccionada)">
-                                <mat-option>(Agregar una nueva tarea)</mat-option>
+                                <mat-option>(Seleccione una tarea)</mat-option>
+                                <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
                                 <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
                             </mat-select>
                         </mat-form-field>
