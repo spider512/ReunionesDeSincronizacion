@@ -28,7 +28,8 @@ export class SeleccionarProyectoComponent implements OnInit {
 
   seleccionarProyecto(p: IProyecto) {
     this.Reuniones.proyectoSeleccionado = p;
-    this.ruta.navigate(['/principal']);
+    this.ruta.navigate(['/cargar-reunion']);
+    // this.ruta.navigate(['/principal']);
 
 
 

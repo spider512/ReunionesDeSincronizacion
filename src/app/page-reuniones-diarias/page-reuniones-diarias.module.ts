@@ -17,8 +17,14 @@ import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-ag
 import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component';
 import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { CargarReunionComponent } from './cargar-reunion/cargar-reunion.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,8 @@ import {MatMenuModule} from '@angular/material/menu';
     PopUpCargarTareaComponent,
     TareasAgregadasComponent,
     DificultadesAgregadasListaComponent,
-    SeleccionarProyectoComponent
+    SeleccionarProyectoComponent,
+    CargarReunionComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent, PantallaQueHiceAyerComponent],
   imports: [
@@ -43,7 +50,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     SharedModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [
     PageReunionesService,
