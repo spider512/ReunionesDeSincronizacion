@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ITarea } from 'src/app/shared/clases';
 import { PantallaQueVoyHacerHoyComponent } from '../pantalla-que-voy-hacer-hoy.component';
 
 @Component({
@@ -18,19 +19,23 @@ export class PopUpCargarTareaComponent {
 
 
   precargarTarea() {
-    var tareaNueva: string = this.inputCargarTarea.nativeElement.value
-    if (tareaNueva.length !== 0) {
+    let tareaNueva: ITarea;
+    tareaNueva = { d: this.inputCargarTarea.nativeElement.value };
+
+    if (!tareaNueva.d) {
       this.pantallaQueVoyHacerHoyComponent.cargarTarea(tareaNueva)
     }
-    this.inputCargarTarea.nativeElement.value = ''
+    this.inputCargarTarea.nativeElement.value = '';
   }
 
   agregarTareaHoy() {
-    var tareaNueva: string = this.inputCargarTarea.nativeElement.value
-    if (tareaNueva.length !== 0) {
+    let tareaNueva: ITarea;
+    tareaNueva = { d: this.inputCargarTarea.nativeElement.value };
+
+    if (!tareaNueva.d) {
       this.pantallaQueVoyHacerHoyComponent.agregarTareaHoy(tareaNueva)
     }
-    this.inputCargarTarea.nativeElement.value= ''
+    this.inputCargarTarea.nativeElement.value = ''
   }
 
 }
