@@ -1,4 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { ITarea } from 'src/app/shared/clases';
+import { IoService } from 'src/app/shared/io.service';
 
 
 @Component({
@@ -9,21 +11,21 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class PantallaQueVoyHacerHoyComponent {
 
   @ViewChild('txtBuscar') txtBuscar!: ElementRef<HTMLInputElement>;
+  public opciones: ITarea[] = []
 
-  opciones: string[] = ["Realizar mockup de app", "Terminar esquema en html", "Comenzar con la arquitectura"]
-  tareaAgregada: string[] = []
+  tareaAgregada: ITarea[] = []
 
 
 
-  constructor() { }
+  constructor( public io : IoService) { }
 
   
 
-  cargarTarea(tarea: string) {
+  cargarTarea(tarea: ITarea) {
     this.opciones.push(tarea)
   }
 
-  quitar(opcion: string) {
+  quitar(opcion: ITarea) {
 
     this.tareaAgregada = this.tareaAgregada.filter((item) => item !== opcion)
     this.opciones.push(opcion)
@@ -31,15 +33,18 @@ export class PantallaQueVoyHacerHoyComponent {
 
   }
 
-  agregarTareaHoy(tarea: string) {
+  agregarTareaHoy(tarea: ITarea) {
     this.tareaAgregada.push(tarea)
   }
   botonAgregarTarea() {
-    const valor = this.txtBuscar.nativeElement.value
-    if (valor !== 'ingrese la tarea precargada...') {
-      this.tareaAgregada.push(valor)
-      this.opciones = this.opciones.filter((opcionesNuevas) => opcionesNuevas !== valor)
+    let texto : string = this.txtBuscar.nativeElement.value;
+    
+    if (texto) {
+      let nuevaTarea : ITarea = {p:1,d:texto,e:'2'}
+      this.tareaAgregada.push(nuevaTarea)
+      this.opciones = this.opciones.filter((opcionesNuevas) => opcionesNuevas !== nuevaTarea)
     }
+
   }
 
 }
