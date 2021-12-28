@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    FlexLayoutModule
   ],
   providers: [
     PageReunionesService,

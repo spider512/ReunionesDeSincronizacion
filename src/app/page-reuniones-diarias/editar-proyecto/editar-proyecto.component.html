@@ -1,15 +1,22 @@
 <div fxLayout="column">
 	<app-navbar-usuario></app-navbar-usuario>
 	<mat-toolbar color="accent" style="margin-bottom: 32px;">
-		<mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-			<div>
-				<button mat-icon-button color="white" aria-label="Volver" (click)="volver();">
-					<mat-icon>chevron_left</mat-icon>
-				</button>
-				<span>Editar el proyecto</span>
-			</div>
-			<button mat-button (click)="grabar()">GRABAR</button>
-		</mat-toolbar-row>
+		<div fxFlex="10"></div>
+
+		<div fxFlex="80">
+			<mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<button mat-icon-button color="white" aria-label="Volver" (click)="volver();">
+						<mat-icon>chevron_left</mat-icon>
+					</button>
+					<span>Editar el proyecto</span>
+				</div>
+				<button mat-button (click)="grabar()">GRABAR</button>
+			</mat-toolbar-row>
+		</div>
+
+		<div fxFlex></div>
+
 	</mat-toolbar>
 
 	<div fxLayout="row" fxFill>
