@@ -121,4 +121,11 @@ export class IoService {
     return new Promise<ITarea[]>((resolve, errorEvent) => { this.getEntidad(e, undefined, { p: p }).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
+  grabarReunionesDiarias(r: any) {
+    let e: string = 'ReunionesDiarias';
+    return new Promise<any[]>((resolve, errorEvent) => { this.setEntidad(e, r).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+
+
 }

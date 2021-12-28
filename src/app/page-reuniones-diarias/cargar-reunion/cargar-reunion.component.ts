@@ -5,6 +5,7 @@ import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NuevoProblemaComponent } from './nuevo-problema/nuevo-problema.component';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-cargar-reunion',
@@ -24,7 +25,7 @@ export class CargarReunionComponent implements OnInit {
   public proyectoSeleccionado?: IProyecto;
 
 
-  constructor(public dialog: MatDialog, public io: IoService, private route: ActivatedRoute, public router: Router) {
+  constructor(public dialog: MatDialog, public io: IoService, private route: ActivatedRoute, public router: Router, public auth: AuthService) {
     this.proyectoSeleccionadoId = parseInt(route.snapshot.paramMap.get("proyecto") || "0");
     if (!this.proyectoSeleccionadoId)
       this.router.navigate(["/seleccionar-proyecto"]);
@@ -43,7 +44,11 @@ export class CargarReunionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  grabar() { }
+  async grabar() {
+    let reunion: any = { dt: new Date().toISOString().split('T')[0], u: this.auth.loginInfo.usuario, p: this.proyectoSeleccionadoId, TareasHoy: this.tareasHoy, TareasAyer: this.tareasAyer, Problemas: this.problemas };
+    let r = await this.io.grabarReunionesDiarias(reunion);
+    this.router.navigate(["/seleccionar-proyecto"]);
+  }
 
   volver() {
     this.router.navigate(["/seleccionar-proyecto"]);
@@ -57,6 +62,7 @@ export class CargarReunionComponent implements OnInit {
         this.tareasHoy.push(tareaHoySeleccionada);
         let tareasTemp: ITarea[] = [];
         this.tareasSinAsignar.forEach(t => {
+
           if (t !== tareaHoySeleccionada)
             tareasTemp.push(t);
         });
@@ -131,7 +137,7 @@ export class CargarReunionComponent implements OnInit {
       if (result) {
 
         console.log(result);
-        let np: IProblema = { d: result, p: this.proyectoSeleccionadoId };
+        let np: IProblema = { d: result, p: this.proyectoSeleccionadoId};
 
         console.log(np);
 
@@ -155,7 +161,6 @@ export class CargarReunionComponent implements OnInit {
 
         console.log(result);
         let nt: ITarea = { d: result, e: estadosTareas.ABIERTA, p: this.proyectoSeleccionadoId };
-
         console.log(nt);
 
         let nuevaTarea: ITarea = (await this.io.grabarTarea(nt))[0];

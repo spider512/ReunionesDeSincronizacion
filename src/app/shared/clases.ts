@@ -11,12 +11,14 @@ export interface ITarea {
     p?: number; //Cod de Proyecto
     d?: string; //Descripción de Tarea   
     e?: string; //Estado
+    // u?: number;  //Usuario asignado
 }
 
 export interface IProblema {
     id?: number; //pk
     p?: number; //Cod de usuario
-    d?: string; //Descripcion de problema   
+    d?: string; //Descripcion de problema
+    // u?: number;  //Usuario asignado   
 }
 
 
