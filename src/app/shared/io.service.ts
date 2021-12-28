@@ -13,14 +13,17 @@ export class IoService {
 
   constructor(public auth: AuthService, private http: HttpClient) { }
 
-  getEntidad(entidad: string, id?: number) {
+  getEntidad(entidad: string, id?: number, parametros?: any) {
     return new Promise((resolve, errorEvent) => {
 
       let params: string;
       if (id)
         params = `${this.auth.UrlEntidad}/${entidad}/{"id":${id}}`;
       else
-        params = `${this.auth.UrlEntidad}/${entidad}`;
+        if (parametros)
+          params = `${this.auth.UrlEntidad}/${entidad}/${JSON.stringify(parametros)}`;
+        else
+          params = `${this.auth.UrlEntidad}/${entidad}`;
 
       this.http.get(params, { headers: this.auth.headers })
         .subscribe((resultado: any) => {
@@ -109,7 +112,13 @@ export class IoService {
   //Endpoint editar o grabar tarea.
   grabarTarea(t: ITarea) {
     let e: string = 'Tareas';
-    return new Promise<IProyecto[]>((resolve, errorEvent) => { this.setEntidad(e, t).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+    return new Promise<ITarea[]>((resolve, errorEvent) => { this.setEntidad(e, t).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+
+  reunionesDiarias_carga(p: number) {
+    let e: string = 'ReunionesDiarias_carga';
+    return new Promise<ITarea[]>((resolve, errorEvent) => { this.getEntidad(e, undefined, { p: p }).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
 }

@@ -18,3 +18,11 @@ export interface IProblema {
     p?: number; //Cod de usuario
     d?: string; //Descripcion de problema   
 }
+
+
+export class estadosTareas {
+    public static ABIERTA = "1";
+    public static EN_PROCESO = "2";
+    public static CERRADA = "3";
+    public static CANCELADA = "4";
+}
