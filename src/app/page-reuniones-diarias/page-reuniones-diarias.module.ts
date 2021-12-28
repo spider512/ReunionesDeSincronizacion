@@ -17,9 +17,15 @@ import { TareasAgregadasComponent } from './pantalla-que-voy-hacer-hoy/tareas-ag
 import { DificultadesAgregadasListaComponent } from './pantalla-dificultades-que-preveo/dificultades-agregadas-lista/dificultades-agregadas-lista.component';
 import { SeleccionarProyectoComponent } from './seleccionar-proyecto/seleccionar-proyecto.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { CargarReunionComponent } from './cargar-reunion/cargar-reunion.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NuevaTareaComponent } from './cargar-reunion/nueva-tarea/nueva-tarea.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     PopUpCargarTareaComponent,
     TareasAgregadasComponent,
     DificultadesAgregadasListaComponent,
-    SeleccionarProyectoComponent
+    SeleccionarProyectoComponent,
+    CargarReunionComponent,
+    NuevaTareaComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent, PantallaQueHiceAyerComponent],
   imports: [
@@ -45,7 +53,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SharedModule,
     MatIconModule,
     MatCheckboxModule,
-    FlexLayoutModule
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [
     PageReunionesService,

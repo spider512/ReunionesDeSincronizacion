@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { IProyecto } from './clases';
+import { ITarea } from './clases';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { IProyecto } from './clases';
 export class IoService {
 
   public loginInfo: any = this.auth.loginInfo;
-  
+
   constructor(public auth: AuthService, private http: HttpClient) { }
 
   getEntidad(entidad: string, id?: number) {
@@ -85,16 +86,30 @@ export class IoService {
     })
   }
 
-
-
+  //Endpoint proyectos getAll, getId
   proyectos(id?: number) {
     let e: string = 'Proyectos';
     return new Promise<IProyecto[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as IProyecto[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
-
-  grabarProyecto(p:IProyecto){
+  //Endpoint Nuevo proyecto, editar proyecto
+  grabarProyecto(p: IProyecto) {
     let e: string = 'Proyectos';
     return new Promise<IProyecto[]>((resolve, errorEvent) => { this.setEntidad(e, p).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+
+
+  //Endpoint get tarea, get tareas
+
+  tareas(id?: number) {
+    let e: string = 'Tareas';
+    return new Promise<ITarea[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+  //Endpoint editar o grabar tarea.
+  grabarTarea(t: ITarea) {
+    let e: string = 'Tareas';
+    return new Promise<IProyecto[]>((resolve, errorEvent) => { this.setEntidad(e, t).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
 }

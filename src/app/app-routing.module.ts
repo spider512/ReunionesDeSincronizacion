@@ -8,10 +8,13 @@ import { PantallaDificultadesQuePreveoComponent } from './page-reuniones-diarias
 import { PantallaQueVoyHacerHoyComponent } from './page-reuniones-diarias/pantalla-que-voy-hacer-hoy/pantalla-que-voy-hacer-hoy.component';
 import { SeleccionarProyectoComponent } from './page-reuniones-diarias/seleccionar-proyecto/seleccionar-proyecto.component';
 import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyecto/editar-proyecto.component';
+import { CargarReunionComponent } from './page-reuniones-diarias/cargar-reunion/cargar-reunion.component';
 
 const routes: Routes = [
   { path: "", component: SeleccionarProyectoComponent },
   { path: "seleccionar-proyecto", component: SeleccionarProyectoComponent },
+  { path: "cargar-reunion", component: CargarReunionComponent },
+  { path: "cargar-reunion/:id", component: CargarReunionComponent },
   { path: "editar-proyecto", component: EditarProyectoComponent },
   { path: "editar-proyecto/:id", component: EditarProyectoComponent },
   { path: "principal", component: PantallaPrincipalComponent },
