@@ -26,6 +26,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NuevaTareaComponent } from './cargar-reunion/nueva-tarea/nueva-tarea.component';
+import { NuevoProblemaComponent } from './cargar-reunion/nuevo-problema/nuevo-problema.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NuevaTareaComponent } from './cargar-reunion/nueva-tarea/nueva-tarea.co
     DificultadesAgregadasListaComponent,
     SeleccionarProyectoComponent,
     CargarReunionComponent,
-    NuevaTareaComponent
+    NuevaTareaComponent,
+    NuevoProblemaComponent
   ],
   exports: [PantallaQueVoyHacerHoyComponent, PantallaQueHiceAyerComponent],
   imports: [
