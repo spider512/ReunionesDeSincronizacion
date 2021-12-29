@@ -115,10 +115,14 @@ export class IoService {
     return new Promise<ITarea[]>((resolve, errorEvent) => { this.setEntidad(e, t).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
-
-  reunionesDiarias_carga(p: number) {
-    let e: string = 'ReunionesDiarias_carga';
+  reunionesDiarias_tareas(p: number) {
+    let e: string = 'ReunionesDiarias_tareas';
     return new Promise<ITarea[]>((resolve, errorEvent) => { this.getEntidad(e, undefined, { p: p }).then(resolveE => { resolve(resolveE as ITarea[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
+  }
+
+    reunionesDiarias(id: number) {
+    let e: string = 'ReunionesDiarias';
+    return new Promise<any[]>((resolve, errorEvent) => { this.getEntidad(e, id).then(resolveE => { resolve(resolveE as any[]); }).catch(errorEventE => { errorEvent(errorEventE); }) });
   }
 
   grabarReunionesDiarias(r: any) {

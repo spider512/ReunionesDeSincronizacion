@@ -9,7 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
-import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -38,7 +38,6 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
     MatInputModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
     SharedModule,

@@ -3,6 +3,7 @@ export interface IProyecto {
     d?: string; //Descripcion
     n?: string; //Nombre
     e?: string; //Estado
+    rh?: number; //Codigo de reunion de hoy
 }
 
 
