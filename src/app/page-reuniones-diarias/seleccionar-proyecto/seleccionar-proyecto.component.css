@@ -10,3 +10,9 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.contenedor-seleccionar-proyecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

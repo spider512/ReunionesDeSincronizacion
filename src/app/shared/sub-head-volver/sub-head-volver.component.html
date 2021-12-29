@@ -1,4 +1,4 @@
-<div class="container-fluid" style="padding: 0px;">
+<!-- <div class="container-fluid" style="padding: 0px;">
     <div class="row subNavBar">
 
         <div class="col"></div>
@@ -15,4 +15,20 @@
         <div class="col"></div>
 
     </div>
-</div>
+</div> -->
+
+
+<mat-toolbar color="accent" style="margin-bottom: 32px;">
+    <mat-toolbar-row>
+        <div fxFlex="20"></div>
+
+        <div fxFlex="60">
+            <button mat-icon-button color="white" aria-label="Volver" (click)="volverAtras();">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <span>{{this.Reuniones.proyectoSeleccionado?.n}}</span>
+        </div>
+
+        <div fxFlex></div>
+    </mat-toolbar-row>
+</mat-toolbar>

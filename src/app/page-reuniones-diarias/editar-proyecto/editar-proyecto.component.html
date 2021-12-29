@@ -1,46 +1,53 @@
 <div fxLayout="column">
-    <app-navbar-usuario></app-navbar-usuario>
-    <mat-toolbar color="accent">
-        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-            <div>
-                <button mat-icon-button color="primary" aria-label="Volver" (click)="volver();">
-                <mat-icon>chevron_left</mat-icon>
-              </button>
-                <span>Editar el proyecto</span>
-            </div>
-            <button mat-button (click)="grabar()">GRABAR</button>
-        </mat-toolbar-row>
-    </mat-toolbar>
+	<app-navbar-usuario></app-navbar-usuario>
+	<mat-toolbar color="accent" style="margin-bottom: 32px;">
+		<div fxFlex="10"></div>
 
-    <div fxLayout="row" fxFill>
-        <div fxFlex="5" fxFlex.gt-sm="20"></div>
-        <div fxFlex="90" fxFlex.gt-sm="60" fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem">
+		<div fxFlex="80">
+			<mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<button mat-icon-button color="white" aria-label="Volver" (click)="volver();">
+						<mat-icon>chevron_left</mat-icon>
+					</button>
+					<span>Editar el proyecto</span>
+				</div>
+				<button mat-button (click)="grabar()">GRABAR</button>
+			</mat-toolbar-row>
+		</div>
 
-            <mat-form-field appearance="standard">
-                <mat-label>Nombre del proyecto</mat-label>
-                <input matInput placeholder="Ej: Portal del ciudadanos" [(ngModel)]="oProyecto.n">
-                <mat-hint>Escriba el nombre que identifique el proyecto</mat-hint>
-            </mat-form-field>
+		<div fxFlex></div>
 
-            <mat-form-field appearance="standard">
-                <mat-label>Descripción del proyecto</mat-label>
-                <textarea rows="5" matInput placeholder="Ej: Sitio que permite al ciudadano acceder a los servicios de la municipalidad" [(ngModel)]="oProyecto.d"></textarea>
-                <mat-hint>Describa brevemente el proyecto</mat-hint>
-            </mat-form-field>
+	</mat-toolbar>
 
+	<div fxLayout="row" fxFill>
+		<div fxFlex="5" fxFlex.gt-sm="20"></div>
+		<div fxFlex="90" fxFlex.gt-sm="60" fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem">
 
+			<mat-form-field appearance="standard">
+				<mat-label>Nombre del proyecto</mat-label>
+				<input matInput placeholder="Placeholder" [(ngModel)]="oProyecto.n">
+				<mat-hint>Escriba el nombre que identifique el proyecto</mat-hint>
+			</mat-form-field>
 
-            <mat-form-field appearance="fill">
-                <mat-label>Estado</mat-label>
-                <mat-select [(ngModel)]="oProyecto.e">
-                    <mat-option *ngFor="let estado of estados" [value]="estado.estado">
-                        {{estado.descripcion}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+			<mat-form-field appearance="standard">
+				<mat-label>Descripción del proyecto</mat-label>
+				<textarea rows="5" matInput placeholder="Placeholder" [(ngModel)]="oProyecto.d"></textarea>
+				<mat-hint>Escriba el nombre que identifique el proyecto</mat-hint>
+			</mat-form-field>
 
 
-        </div>
-    </div>
-    <div fxFlex></div>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Estado</mat-label>
+				<mat-select [(ngModel)]="oProyecto.e">
+					<mat-option *ngFor="let estado of estados" [value]="estado.estado">
+						{{estado.descripcion}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+
+		</div>
+		<div fxFlex></div>
+	</div>
 </div>

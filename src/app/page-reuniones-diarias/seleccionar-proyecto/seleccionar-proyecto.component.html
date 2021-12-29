@@ -1,50 +1,98 @@
-<app-navbar-usuario></app-navbar-usuario>
+<div fxLayout="column">
 
-<div class="container-fluid" style="padding: 0px;">
-    <div class="row subNavBar">
+    <app-navbar-usuario></app-navbar-usuario>
 
-        <div class="col"></div>
 
-        <div class="col-10 subHeader" style="display: flex; height: 38px;">
-            <div>
-                <h4 style="margin-bottom: 0px;">
-                    Seleccione el proyecto
-                </h4>
+    <mat-toolbar color="accent" style="margin-bottom: 32px;">
+
+        <div fxFlex="10"></div>
+
+        <div fxFlex="80">
+            <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+
+                <div>
+                    <span>Seleccione el Proyecto</span>
+                </div>
+
+                <div>
+                    <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
+                </div>
+
+            </mat-toolbar-row>
+        </div>
+
+        <div fxFlex></div>
+
+    </mat-toolbar>
+
+
+
+
+
+
+    <!-- <mat-toolbar color="accent" style="margin-bottom: 32px;">
+        <mat-toolbar-row>
+
+            <div fxLayout="row" fxFill>
+                <div fxFlex="20"></div>
+
+                <div fxFlex="60" fxLayoutAlign="space-between center">
+                    <span>Seleccione el Proyecto</span>
+
+                    <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
+                </div>
+
+                <div fxFlex></div>
             </div>
+
+        </mat-toolbar-row>
+    </mat-toolbar> -->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+
+            <div class="col-8">
+
+                <mat-selection-list [multiple]="false">
+
+                    <div class="contenedor-seleccionar-proyecto" *ngFor="let proyecto of proyectos">
+
+                        <div class="col-11">
+                            <mat-list-option (click)="seleccionarProyecto(proyecto)">
+
+                                <mat-icon mat-list-icon>home</mat-icon>
+                                <h3 mat-line> {{ proyecto.n }} </h3>
+                                <span mat-line> {{ proyecto.d }} </span>
+
+                            </mat-list-option>
+                        </div>
+
+                        <div class="col">
+                            <button mat-icon-button [matMenuTriggerFor]="menuDesplegar"
+                                aria-label="Example icon-button with a menu">
+                                <mat-icon>more_vert</mat-icon>
+                            </button>
+
+                            <mat-menu #menuDesplegar="matMenu">
+                                <button mat-menu-item (click)="editar(proyecto)">
+                                    <mat-icon>edit</mat-icon>
+                                    <span>Editar</span>
+                                </button>
+                                <button mat-menu-item>
+                                    <mat-icon>delete</mat-icon>
+                                    <span>Eliminar</span>
+                                </button>
+                            </mat-menu>
+                        </div>
+                    </div>
+                </mat-selection-list>
+
+            </div>
+
+            <div class="col"></div>
         </div>
-
-        <div class="col"></div>
-
-    </div>
-</div>
-
-<hr>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col"></div>
-
-        <div class="col-8">
-
-
-            <mat-selection-list [multiple]="false">
-                <mat-list-item *ngFor="let proyecto of proyectos" (click)="seleccionarProyecto(proyecto)">
-                    <mat-icon mat-list-icon>home</mat-icon>
-                    <h3 mat-line> {{ proyecto.n }} </h3>
-                    <p mat-line>
-                        <span> {{ proyecto.d }} </span>
-                    </p>
-                    <div> {{ proyecto.e }} </div>
-                    <button mat-icon-button (click)="editar(proyecto)">
-                    <mat-icon class="mat-24">more_vert</mat-icon>
-                  </button>
-                </mat-list-item>
-            </mat-selection-list>
-
-            <br />
-            <button mat-raised-button (click)="crearProyecto()">Crear nuevo proyecto</button>
-        </div>
-
-        <div class="col"></div>
     </div>
 </div>
