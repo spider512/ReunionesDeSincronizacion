@@ -1,5 +1,5 @@
-<div style="padding-top: 10px;" color="accent">
-    <div fxLayout="row"  fxFill sfxLayoutAlign=" center"  color="accent" >
+<!-- <div class="container-fluid" style="padding: 0px;">
+    <div class="row subNavBar">
 
         <div fxFlex="10%" ></div>
 
@@ -13,4 +13,20 @@
         <div fxFlex></div>
 
     </div>
-</div>
+</div> -->
+
+
+<mat-toolbar color="accent" style="margin-bottom: 32px;">
+    <mat-toolbar-row>
+        <div fxFlex="20"></div>
+
+        <div fxFlex="60">
+            <button mat-icon-button color="white" aria-label="Volver" (click)="volverAtras();">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <span>{{this.Reuniones.proyectoSeleccionado?.n}}</span>
+        </div>
+
+        <div fxFlex></div>
+    </mat-toolbar-row>
+</mat-toolbar>

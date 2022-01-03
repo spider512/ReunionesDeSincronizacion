@@ -22,11 +22,14 @@ export class CargarReunionComponent implements OnInit {
   public problemas: IProblema[] = [];
   public panelOpenState: boolean = false;
   public proyectoSeleccionadoId: number;
+  public ReunionSeleccionadaId: number;
   public proyectoSeleccionado?: IProyecto;
-
+  public reunion?: any;
 
   constructor(public dialog: MatDialog, public io: IoService, private route: ActivatedRoute, public router: Router, public auth: AuthService) {
     this.proyectoSeleccionadoId = parseInt(route.snapshot.paramMap.get("proyecto") || "0");
+    this.ReunionSeleccionadaId = parseInt(route.snapshot.paramMap.get("id") || "0");
+
     if (!this.proyectoSeleccionadoId)
       this.router.navigate(["/seleccionar-proyecto"]);
 
@@ -36,8 +39,28 @@ export class CargarReunionComponent implements OnInit {
   async cargarProyecto(id: number) {
     this.proyectoSeleccionado = (await this.io.proyectos(id))[0];
 
-    this.tareasSinAsignar = (await this.io.reunionesDiarias_carga(id));
-    console.log(this.tareasSinAsignar);
+    if (this.proyectoSeleccionado.rh && !this.ReunionSeleccionadaId) {
+      this.router.navigate([`/cargar-reunion/${this.proyectoSeleccionado.id}/${this.proyectoSeleccionado.rh}`]);
+    }
+
+    console.log(`Reunion Selected: ${this.ReunionSeleccionadaId}`);
+    if (this.ReunionSeleccionadaId) {
+      this.reunion = (await this.io.reunionesDiarias(this.ReunionSeleccionadaId))[0];
+      this.tareasAyer = this.reunion.TareasAyer?.filter((t: { u: any; }) => t.u == this.auth.loginInfo.usuario);
+      this.tareasHoy = this.reunion.TareasHoy?.filter((t: { u: any; }) => t.u == this.auth.loginInfo.usuario);
+      this.problemas = this.reunion.Problemas?.filter((t: { u: any; }) => t.u == this.auth.loginInfo.usuario);
+
+    }
+
+    this.tareasSinAsignar = (await this.io.reunionesDiarias_tareas(id));
+    //Eliminar las tareas que ya estan asignadas
+    // let tareasTemp: ITarea[] = [];
+    // this.tareasSinAsignar.forEach(t => {
+    //   if (!this.tareasAyer.find(ta => ta.id == t.id) && !this.tareasHoy.find(th => th.id == t.id))
+    //     tareasTemp.push(t);
+    // }
+    // );
+    // this.tareasSinAsignar = tareasTemp;
 
   }
 
@@ -59,6 +82,7 @@ export class CargarReunionComponent implements OnInit {
         const nt = this.NuevaTarea(this.tareasHoy);
       }
       else {
+        console.log(tareaHoySeleccionada);
         this.tareasHoy.push(tareaHoySeleccionada);
         let tareasTemp: ITarea[] = [];
         this.tareasSinAsignar.forEach(t => {
@@ -77,6 +101,7 @@ export class CargarReunionComponent implements OnInit {
         const nt = this.NuevaTarea(this.tareasAyer);
       }
       else {
+        this.tareasHoy.push(tareaAyerSeleccionada);
         this.tareasAyer.push(tareaAyerSeleccionada);
         let tareasTemp: ITarea[] = [];
         this.tareasSinAsignar.forEach(t => {
@@ -135,22 +160,13 @@ export class CargarReunionComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(async (result: any) => {
       if (result) {
-
-        console.log(result);
-        let np: IProblema = { d: result, p: this.proyectoSeleccionadoId};
-
-        console.log(np);
-
-        // let nuevoProblema: IProblema = (await this.io.grabarProblema(np))[0];
-        // np.id = nuevoProblema.id;
-
+        let np: IProblema = { d: result, p: this.proyectoSeleccionadoId };
         this.problemas.push(np);
       }
     });
   }
 
   NuevaTarea(conjunto: ITarea[] = this.tareasSinAsignar) {
-
     const dialogRef = this.dialog.open(NuevaTareaComponent, {
       // width: '250px',
       data: {},
@@ -159,23 +175,15 @@ export class CargarReunionComponent implements OnInit {
     dialogRef.afterClosed().subscribe(async (result: any) => {
       if (result) {
 
-        console.log(result);
         let nt: ITarea = { d: result, e: estadosTareas.ABIERTA, p: this.proyectoSeleccionadoId };
-        console.log(nt);
 
         let nuevaTarea: ITarea = (await this.io.grabarTarea(nt))[0];
         nt.id = nuevaTarea.id;
-
         conjunto.push(nt);
-
       }
-
-
-
+      this.tareaHoySeleccionada = undefined;
+      this.tareaAyerSeleccionada = undefined;
     });
-
-
   }
-
 
 }

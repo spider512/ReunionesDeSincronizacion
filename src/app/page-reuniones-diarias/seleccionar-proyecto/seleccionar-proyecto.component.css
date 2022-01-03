@@ -9,6 +9,42 @@
 .subHeader {
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 10px;
+=======
+}
+
+.contenedor-seleccionar-proyecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 524px) {
+    .contenedoDeBotonYTexto  {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .contenedoDeBotonYTexto > div  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+    }
+    .contenedorCajaVerde
+    {
+        height:65px;
+    }
+  }
+
+
+.botonCrarProyecto
+{
+>>>>>>> login
 
 }

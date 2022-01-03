@@ -59,7 +59,8 @@ import { NuevoProblemaComponent } from './cargar-reunion/nuevo-problema/nuevo-pr
     FlexLayoutModule,
     MatExpansionModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [
     PageReunionesService,

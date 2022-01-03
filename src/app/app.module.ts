@@ -9,16 +9,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { PageReunionesDiariasModule } from './page-reuniones-diarias/page-reuniones-diarias.module';
-import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSelectModule} from '@angular/material/select';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
-import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyecto/editar-proyecto.component';
 
 
@@ -39,7 +39,6 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
     MatInputModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     PageReunionesDiariasModule,
     BrowserAnimationsModule,
     SharedModule,
