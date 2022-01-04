@@ -3,6 +3,7 @@
     justify-content: center;
     margin-top: auto ;
     padding: 16% ;
+    
   }
   
 .cuadrado {
@@ -33,7 +34,34 @@
     }
 
     .fuentesCampos {
-        font-size: small
+        font-size: small;
+        width: 46vw ;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+
+
+    .fuentesBoton {
+        margin-right: 1vw ;
+        font-size: 12px ;
+        line-height: 30px ;
+        width: auto ;
+    
+    }
+
+
+    .fuentesCampos {
+        margin-right: 1vw ;
+        font-size: 12px ;
+        line-height: 20px ;
+        width: 52vw ;
+    }
+
+    .cuadrado {
+        width: 95%;
+
     }
     
 }

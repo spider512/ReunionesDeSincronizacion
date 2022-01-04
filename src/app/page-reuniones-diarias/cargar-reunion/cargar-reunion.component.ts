@@ -54,13 +54,13 @@ export class CargarReunionComponent implements OnInit {
 
     this.tareasSinAsignar = (await this.io.reunionesDiarias_tareas(id));
     //Eliminar las tareas que ya estan asignadas
-    // let tareasTemp: ITarea[] = [];
-    // this.tareasSinAsignar.forEach(t => {
-    //   if (!this.tareasAyer.find(ta => ta.id == t.id) && !this.tareasHoy.find(th => th.id == t.id))
-    //     tareasTemp.push(t);
-    // }
-    // );
-    // this.tareasSinAsignar = tareasTemp;
+     let tareasTemp: ITarea[] = [];
+     this.tareasSinAsignar.forEach(t => {
+       if (!this.tareasAyer.find(ta => ta.id == t.id) && !this.tareasHoy.find(th => th.id == t.id))
+         tareasTemp.push(t);
+     }
+     );
+     this.tareasSinAsignar = tareasTemp;
 
   }
 
