@@ -50,49 +50,48 @@
 
 
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col"></div>
 
-            <div class="col-8">
+    <div fxLayout="row" fxFill>
+        <div fxFlex="20"></div>
 
-                <mat-selection-list [multiple]="false">
+        <div fxFlex="60">
 
-                    <div class="contenedor-seleccionar-proyecto" *ngFor="let proyecto of proyectos">
+            <mat-selection-list [multiple]="false">
 
-                        <div class="col-11">
-                            <mat-list-option (click)="seleccionarProyecto(proyecto)">
+                <div class="contenedor-seleccionar-proyecto" *ngFor="let proyecto of proyectos">
 
-                                <mat-icon mat-list-icon>home</mat-icon>
-                                <h3 mat-line> {{ proyecto.n }} </h3>
-                                <span mat-line> {{ proyecto.d }} </span>
+                    <div fxFlex="90">
+                        <mat-list-option (click)="seleccionarProyecto(proyecto)">
 
-                            </mat-list-option>
-                        </div>
+                            <mat-icon mat-list-icon>home</mat-icon>
+                            <h3 mat-line> {{ proyecto.n }} </h3>
+                            <span mat-line> {{ proyecto.d }} </span>
 
-                        <div class="col">
-                            <button mat-icon-button [matMenuTriggerFor]="menuDesplegar"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-
-                            <mat-menu #menuDesplegar="matMenu">
-                                <button mat-menu-item (click)="editar(proyecto)">
-                                    <mat-icon>edit</mat-icon>
-                                    <span>Editar</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <mat-icon>delete</mat-icon>
-                                    <span>Eliminar</span>
-                                </button>
-                            </mat-menu>
-                        </div>
+                        </mat-list-option>
                     </div>
-                </mat-selection-list>
 
-            </div>
+                    <div fxFlex="10">
+                        <button mat-icon-button [matMenuTriggerFor]="menuDesplegar"
+                            aria-label="Example icon-button with a menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
 
-            <div class="col"></div>
+                        <mat-menu #menuDesplegar="matMenu">
+                            <button mat-menu-item (click)="editar(proyecto)">
+                                <mat-icon>edit</mat-icon>
+                                <span>Editar</span>
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>delete</mat-icon>
+                                <span>Eliminar</span>
+                            </button>
+                        </mat-menu>
+                    </div>
+                </div>
+            </mat-selection-list>
+
         </div>
+
+        <div fxFlex></div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div fxLayout="column">
     <app-navbar-usuario></app-navbar-usuario>
-    <mat-toolbar color="accent">
+    <mat-toolbar class="margin-b" color="accent">
         <div fxFlex="10"></div>
 
         <div fxFlex="80">
@@ -20,9 +20,10 @@
 
 
     <div fxLayout="row" fxFill>
-        <div fxFlex="5" fxFlex.gt-sm="20"></div>
-        <div fxFlex="90" fxFlex.gt-sm="60" fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem">
-            <h1>{{proyectoSeleccionado?.d}}</h1>
+        <div fxFlex.gt-md="20" fxFlex.gt-xs="10"></div>
+        <div fxFlex.gt-md="60" fxFlex.gt-xs="90" fxLayout="column" fxLayoutAlign="space-between stretch"
+            fxLayoutGap="1rem">
+            <h3>{{proyectoSeleccionado?.d}}</h3>
             <mat-accordion>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -34,6 +35,17 @@
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                     <mat-list>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Agregar una tarea</mat-label>
+                            <mat-select [(value)]="tareaAyerSeleccionada"
+                                (valueChange)="seleccionarTareaAyer(tareaAyerSeleccionada)">
+                                <mat-option>(Seleccione una tarea)</mat-option>
+                                <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
+                                <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
                         <mat-list-item *ngFor="let i of tareasAyer">
                             <mat-icon mat-list-icon>done</mat-icon>
                             <h4 mat-line>{{i.d}}</h4>
@@ -44,15 +56,7 @@
 
                             <!-- <p mat-line>{{i.descripcion}}</p> -->
                         </mat-list-item>
-                        <mat-form-field appearance="fill">
-                            <mat-label>Agregar una tarea</mat-label>
-                            <mat-select [(value)]="tareaAyerSeleccionada"
-                                (valueChange)="seleccionarTareaAyer(tareaAyerSeleccionada)">
-                                <mat-option>(Seleccione una tarea)</mat-option>
-                                <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
-                                <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+
                     </mat-list>
                 </mat-expansion-panel>
                 <mat-expansion-panel>
@@ -64,6 +68,17 @@
                             Tareas que realizaré el dia de hoy
                         </mat-panel-description>
                     </mat-expansion-panel-header>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Agregar una tarea</mat-label>
+                        <mat-select [(value)]="tareaHoySeleccionada"
+                            (valueChange)="seleccionarTareaHoy(tareaHoySeleccionada)">
+                            <mat-option>(Seleccione una tarea)</mat-option>
+                            <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
+                            <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
                     <mat-list>
                         <mat-list-item *ngFor="let i of tareasHoy">
                             <mat-icon mat-list-icon>done</mat-icon>
@@ -75,15 +90,7 @@
 
                             <!-- <p mat-line>{{i.descripcion}}</p> -->
                         </mat-list-item>
-                        <mat-form-field appearance="fill">
-                            <mat-label>Agregar una tarea</mat-label>
-                            <mat-select [(value)]="tareaHoySeleccionada"
-                                (valueChange)="seleccionarTareaHoy(tareaHoySeleccionada)">
-                                <mat-option>(Seleccione una tarea)</mat-option>
-                                <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
-                                <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+
                     </mat-list>
 
                 </mat-expansion-panel>
@@ -97,6 +104,10 @@
                             Problemas para realizar las tareas del dia de hoy.
                         </mat-panel-description>
                     </mat-expansion-panel-header>
+
+                    <button mat-raised-button color="accent" (click)="agregarProblema()">Agregar un
+                        problema</button>
+
                     <mat-list>
                         <mat-list-item *ngFor="let i of problemas">
                             <mat-icon mat-list-icon>done</mat-icon>
@@ -108,8 +119,7 @@
 
                             <!-- <p mat-line>{{i.descripcion}}</p> -->
                         </mat-list-item>
-                        <button mat-raised-button color="accent" (click)="agregarProblema()">Agregar un
-                            problema</button>
+
 
                     </mat-list>
                 </mat-expansion-panel>
@@ -118,5 +128,5 @@
 
         </div>
     </div>
-    <div fxFlex></div>
+    <div fxFlex.gt-md="20" fxFlex.gt-xs="10"></div>
 </div>
