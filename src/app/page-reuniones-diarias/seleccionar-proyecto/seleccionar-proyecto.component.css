@@ -17,9 +17,12 @@
     justify-content: center;
 }
 
+.boton-crear-proyecto::before {
+    content: 'Crear nuevo proyecto'
+}
 
-@media only screen and (max-width: 524px) {
-    .contenedoDeBotonYTexto  {
+@media only screen and (max-width: 485px) {
+    /* .contenedoDeBotonYTexto  {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -36,8 +39,12 @@
     .contenedorCajaVerde
     {
         height:65px;
+    } */
+    
+    .boton-crear-proyecto::before {
+        content: 'Crear'
     }
-  }
+}
 
 
 .botonCrarProyecto
