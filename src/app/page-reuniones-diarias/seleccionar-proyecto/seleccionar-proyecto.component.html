@@ -5,9 +5,9 @@
 
     <mat-toolbar class="contenedorCajaVerde" color="accent" style="margin-bottom: 32px">
 
-        <div fxFlex="10"></div>
+        <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
 
-        <div fxFlex="80">
+        <div fxFlex="95" fxFlex.gt-xs="80">
             <mat-toolbar-row class="contenedoDeBotonYTexto" fxLayout="row" fxLayoutAlign="space-between center">
 
                 <div>
@@ -21,7 +21,7 @@
             </mat-toolbar-row>
         </div>
 
-        <div fxFlex></div>
+        <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
 
     </mat-toolbar>
 
@@ -52,9 +52,11 @@
 
 
     <div fxLayout="row" fxFill>
-        <div fxFlex="20"></div>
+        <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
 
-        <div fxFlex="60">
+        <div fxFlex="90" fxFlex.gt-xs="70" fxFlex.gt-md="60">
+
+            <h3>Proyectos</h3>
 
             <mat-selection-list [multiple]="false">
 
@@ -92,6 +94,6 @@
 
         </div>
 
-        <div fxFlex></div>
+        <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
     </div>
 </div>
