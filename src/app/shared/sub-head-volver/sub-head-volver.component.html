@@ -1,25 +1,22 @@
 <!-- <div class="container-fluid" style="padding: 0px;">
     <div class="row subNavBar">
 
-        <div class="col"></div>
+        <div fxFlex="10%" ></div>
 
-        <div class="col-10 subHeader" style="display: flex;">
-            <div>
-                <h4 style="margin-bottom: 0px;">{{this.Reuniones.proyectoSeleccionado?.n}}</h4>
-            </div>
-            <div>
-                <button class="btn btn-outline-secondary boton" (click)="volverAtras()">Volver</button>
-            </div>
+        <div fxFlex="70%">
+            <h4>{{this.Reuniones.proyectoSeleccionado?.n}}</h4>
         </div>
-
-        <div class="col"></div>
+            
+        <div fxFlex="10%">
+            <button class="btn btn-outline-secondary boton" (click)="volverAtras()">Volver</button>
+        </div>
+        <div fxFlex></div>
 
     </div>
 </div> -->
 
 
-<mat-toolbar color="accent" style="margin-bottom: 32px;">
-    <mat-toolbar-row>
+    <mat-toolbar-row color="accent" style="margin-bottom: 32px;">
         <div fxFlex="20"></div>
 
         <div fxFlex="60">
@@ -31,4 +28,4 @@
 
         <div fxFlex></div>
     </mat-toolbar-row>
-</mat-toolbar>
+

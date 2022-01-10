@@ -1,5 +1,5 @@
 .contenedorCuadrado {
-    display: flex;
+    
     justify-content: center;
     margin-top: auto ;
     padding: 16% ;
@@ -14,11 +14,8 @@
     border: 1px solid #3FA948;
     box-sizing: border-box;
     border-radius: 30px;
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
     padding:5% ;
-  
 }
 
 .fuentesBoton {
@@ -30,16 +27,41 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .cuadrado {
-        display: block;
-    }
+
 
     .fuentesBoton {
         font-size: small
     }
 
     .fuentesCampos {
-        font-size: small
+        font-size: small;
+        width: 46vw ;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+
+
+    .fuentesBoton {
+        margin-right: 1vw ;
+        font-size: 12px ;
+        line-height: 30px ;
+        width: auto ;
+    
+    }
+
+
+    .fuentesCampos {
+        margin-right: 1vw ;
+        font-size: 12px ;
+        line-height: 20px ;
+        width: 52vw ;
+    }
+
+    .cuadrado {
+        width: 95%;
+
     }
     
 }

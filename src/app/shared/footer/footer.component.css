@@ -1,0 +1,19 @@
+.footer {
+    background-color:#9ACD32;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+
+}
+
+
+@media only screen and (max-height: 260px) {
+
+    .footer {
+        height: 8px;
+    }
+    
+}
+
