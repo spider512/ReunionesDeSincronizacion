@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
     background-color:#9ACD32;
     position: fixed;
     bottom: 0;
@@ -16,4 +16,15 @@
     }
     
 }
+ */
 
+.content {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}
+
+.footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+    height: auto;
+}

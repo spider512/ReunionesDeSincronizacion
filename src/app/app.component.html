@@ -1,7 +1,6 @@
-<main>
+<main style="min-height: 93.4vh">
     <app-login *ngIf="!auth.isLogged()"></app-login>
     <router-outlet *ngIf="auth.isLogged()"></router-outlet>
 </main>
-
 
 <app-footer></app-footer>
