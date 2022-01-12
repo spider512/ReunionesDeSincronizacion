@@ -1,21 +1,23 @@
 <div fxLayout="column">
     <app-navbar-usuario></app-navbar-usuario>
     <mat-toolbar class="margin-b" color="accent">
-        <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
+        <mat-toolbar-row>
+            <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
 
-        <div fxFlex="95" fxFlex.gt-xs="80">
-            <mat-toolbar-row class="sin-padding" fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayout="row" fxLayoutAlign="start center">
-                    <button mat-icon-button color="primary" aria-label="Volver" (click)="volver();">
-                        <mat-icon>chevron_left</mat-icon>
-                    </button>
-                    <span>Cargar Reunión</span>
-                </div>
-                <button mat-button (click)="grabar()">GRABAR</button>
-            </mat-toolbar-row>
-        </div>
+            <div fxFlex="95" fxFlex.gt-xs="80">
+                <mat-toolbar-row class="sin-padding" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="start center">
+                        <button mat-icon-button color="primary" aria-label="Volver" (click)="volver();">
+                            <mat-icon>chevron_left</mat-icon>
+                        </button>
+                        <span>Cargar Reunión</span>
+                    </div>
+                    <button mat-button (click)="grabar()">GRABAR</button>
+                </mat-toolbar-row>
+            </div>
 
-        <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
+            <div fxFlex="2.5" fxFlex.gt-xs="10"></div>
+        </mat-toolbar-row>
     </mat-toolbar>
 
 
@@ -38,8 +40,7 @@
 
                         <mat-form-field appearance="fill">
                             <mat-label>Agregar una tarea</mat-label>
-                            <mat-select [(value)]="tareaAyerSeleccionada"
-                                (valueChange)="seleccionarTareaAyer(tareaAyerSeleccionada)">
+                            <mat-select [(value)]="tareaAyerSeleccionada" (valueChange)="seleccionarTareaAyer(tareaAyerSeleccionada)">
                                 <mat-option>(Seleccione una tarea)</mat-option>
                                 <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
                                 <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
@@ -74,8 +75,7 @@
                     <mat-list class="margin-t">
                         <mat-form-field appearance="fill">
                             <mat-label>Agregar una tarea</mat-label>
-                            <mat-select [(value)]="tareaHoySeleccionada"
-                                (valueChange)="seleccionarTareaHoy(tareaHoySeleccionada)">
+                            <mat-select [(value)]="tareaHoySeleccionada" (valueChange)="seleccionarTareaHoy(tareaHoySeleccionada)">
                                 <mat-option>(Seleccione una tarea)</mat-option>
                                 <mat-option [value]="{id:'-1'}">Agregar una nueva tarea</mat-option>
                                 <mat-option *ngFor="let t of tareasSinAsignar" [value]="t">{{t.d}}</mat-option>
