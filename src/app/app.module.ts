@@ -20,6 +20,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyecto/editar-proyecto.component';
+import { ListaDeTareasComponent } from './lista-de-tareas/lista-de-tareas.component';
+
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -29,7 +32,8 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
     FooterComponent,
     LoginComponent,
     EditarProyectoComponent,
-    FooterComponent
+    FooterComponent,
+    ListaDeTareasComponent
   ],
   imports: [
     AppRoutingModule,
@@ -49,7 +53,8 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
     MatCheckboxModule,
     MatToolbarModule,
     MatSelectModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
 
   ],
   providers: [],
