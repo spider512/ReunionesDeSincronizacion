@@ -3,10 +3,8 @@
 
     <div fxFlex="90" fxFlex.gt-xs="70" fxFlex.gt-md="60" fxFill>
 
-        <button id="botonTareas" mat-button (click)="verTareas()">Ver tareas</button>
-
+        <button mat-raised-button color="accent" (click)="verTareas()">Ver tareas</button>
         <mat-selection-list [multiple]="false">
-            <div></div>
             <div class="contenedor-seleccionar-proyecto" *ngFor="let tarea of tareas">
 
                 <div fxFlex="90">
