@@ -1,0 +1,45 @@
+<div fxLayout="row">
+    <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
+
+    <div fxFlex="90" fxFlex.gt-xs="70" fxFlex.gt-md="60" fxFill>
+
+        <button id="botonTareas" mat-button (click)="verTareas()">Ver tareas</button>
+
+        <mat-selection-list [multiple]="false">
+            <div></div>
+            <div class="contenedor-seleccionar-proyecto" *ngFor="let tarea of tareas">
+
+                <div fxFlex="90">
+                    <mat-list-option>
+
+                        <!-- <mat-icon mat-list-icon>home</mat-icon> -->
+                        <h3 mat-line> {{ tarea.d}} </h3>
+                        <span mat-line> Estado: {{ tarea.e}} </span>
+
+                    </mat-list-option>
+                </div>
+
+                <div fxFlex="10">
+                    <button mat-icon-button [matMenuTriggerFor]="menuDesplegar"
+                        aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+
+                    <mat-menu #menuDesplegar="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>edit</mat-icon>
+                            <span>Cambiar estado</span>
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Eliminar</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+        </mat-selection-list>
+
+    </div>
+
+    <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
+</div>
