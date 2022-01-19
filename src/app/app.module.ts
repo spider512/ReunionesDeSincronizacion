@@ -23,6 +23,7 @@ import { EditarProyectoComponent } from './page-reuniones-diarias/editar-proyect
 import { ListaDeTareasComponent } from './lista-de-tareas/lista-de-tareas.component';
 
 import {MatTableModule} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -33,7 +34,8 @@ import {MatTableModule} from '@angular/material/table';
     LoginComponent,
     EditarProyectoComponent,
     FooterComponent,
-    ListaDeTareasComponent
+    ListaDeTareasComponent,
+    
   ],
   imports: [
     AppRoutingModule,
@@ -54,7 +56,8 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatSelectModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatExpansionModule
 
   ],
   providers: [],

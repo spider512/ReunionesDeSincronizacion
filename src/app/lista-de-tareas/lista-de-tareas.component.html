@@ -1,4 +1,6 @@
-<div fxLayout="row">
+<!-- .................Opcion numero uno................. -->
+
+<!-- <div fxLayout="row">
     <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
 
     <div fxFlex="90" fxFlex.gt-xs="70" fxFlex.gt-md="60" fxFill>
@@ -8,11 +10,9 @@
             <div class="contenedor-seleccionar-proyecto" *ngFor="let tarea of tareas">
 
                 <div fxFlex="90">
-                    <mat-list-option>
-
-                        <!-- <mat-icon mat-list-icon>home</mat-icon> -->
-                        <h3 mat-line> {{ tarea.d}} </h3>
-                        <span mat-line> Estado: {{ tarea.e}} </span>
+                    <mat-list-option> 
+                        <h3 mat-line>{{tarea.d}} </h3>
+                        <span mat-line>Estado: {{ tarea.e}}</span>
 
                     </mat-list-option>
                 </div>
@@ -40,4 +40,55 @@
     </div>
 
     <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
-</div>
+</div> -->
+
+
+<!-- .................Opcion numero dos................. -->
+
+
+
+<!-- 
+
+<div fxLayout="row" fxFill>
+    <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-sm="20"></div>
+    <div fxFlex="90" fxFlex.gt-sm="60" fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem">
+        <button mat-raised-button color="accent" (click)="verTareas()">Ver tareas</button>
+        <h3></h3>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let tarea of tareas">
+                <mat-expansion-panel-header class="exp-height">
+
+                    <mat-panel-title class="alinear">
+                        {{tarea.d}}
+                    </mat-panel-title>
+
+                    <mat-panel-description class="alinear">
+                        {{tarea.e}}
+                    </mat-panel-description>
+
+                </mat-expansion-panel-header>
+
+                <mat-list class="margin-t">
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Estado</mat-label>
+                        <mat-select [(ngModel)]="oProyecto.e"> 
+                        <mat-option *ngFor="let estado of estados" [value]="estado.estado">
+                            {{estado.descripcion}}
+                        </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </mat-list>
+            </mat-expansion-panel>
+
+
+
+
+        </mat-accordion>
+
+
+    </div>
+
+    <div fxFlex="5" fxFlex.gt-xs="15" fxFlex.gt-md="20"></div>
+</div> -->

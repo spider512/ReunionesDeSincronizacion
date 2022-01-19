@@ -11,7 +11,13 @@ import { IProyecto } from '../../shared/clases'
 export class EditarProyectoComponent implements OnInit {
 	public proyectoSeleccionado: any;
 	public oProyecto: IProyecto = {};
-	public estados: any[] = [{ estado: 1, descripcion: "No iniciado" }, { estado: 2, descripcion: "Iniciado" }, { estado: 3, descripcion: "Finalizado" }, { estado: 4, descripcion: "Cancelado" }];
+	public estados: any[] = [{
+		estado: 1,
+		descripcion: "No iniciado"
+	},
+	{ estado: 2, descripcion: "Iniciado" },
+	{ estado: 3, descripcion: "Finalizado" },
+	{ estado: 4, descripcion: "Cancelado" }];
 
 
 	constructor(public ruta: Router, router: ActivatedRoute, public io: IoService) {

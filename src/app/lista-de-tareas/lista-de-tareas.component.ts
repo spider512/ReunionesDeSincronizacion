@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { async } from '@angular/core/testing';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IoService } from 'src/app/shared/io.service';
-import { ITarea } from '../shared/clases';
+import { IProyecto, ITarea } from '../shared/clases';
+
+
 
 export class TableBasicExample {
 }
@@ -13,10 +15,22 @@ export class TableBasicExample {
 
 
 export class ListaDeTareasComponent {
-  constructor(public io: IoService) { }
-
+  constructor(public io: IoService, public ruta: Router, router: ActivatedRoute) {
+    this.proyectoSeleccionado = router.snapshot.paramMap.get("id");
+    if (this.proyectoSeleccionado) {
+      this.cargarProyecto(this.proyectoSeleccionado);
+    }
+  }
+  public proyectoSeleccionado: any;
+  public estados: any[] = [{ estado: 1, descripcion: "No iniciado" }, { estado: 2, descripcion: "Iniciado" }, { estado: 3, descripcion: "Finalizado" }, { estado: 4, descripcion: "Cancelado" }];
   public tareas: ITarea[] = []
+  public oProyecto: IProyecto = {};
 
+  async cargarProyecto(id: number) {
+
+    let proyectos: IProyecto[] = await this.io.proyectos(id);
+    this.oProyecto = proyectos[0];
+  }
   async verTareas() {
     const nuevo = await (this.io.tareas())
 
